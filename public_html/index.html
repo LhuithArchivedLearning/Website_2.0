@@ -1,96 +1,358 @@
-﻿
-<!DOCTYPE html>
-<html id="Index-Html">   
- <head>
- <meta charset ="utf-8">
- <meta name="viewport" content="width=device-width">
- <meta name="description" content="Eugene Martens Portfolio"> 
- <meta name="keywords" content="Eugene Martens, Portfolio, software development, web desighn, game development, programming">
- <meta name="author" content="Eugene Martens">
- <link rel="shortcut icon" type="image/png" href="img/Icons/favicon.ico">
+﻿<!DOCTYPE html>
+<html id="Index-Html">
 
-	  <title>Gene Space | Oh Hey</title> 		  
- 	  <link rel="stylesheet" href="./css/style.css">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Eugene Martens Portfolio">
+	<meta name="keywords" content="Eugene Martens, Portfolio, software development, web desighn, game development, programming">
+	<meta name="author" content="Eugene Martens">
+	<link rel="shortcut icon" type="image/png" href="img/Icons/favicon.ico">
 
- </head>
-    <body id ="#Index-Body">     
+	<title>Gene Space | Oh Hey</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/custom.css" media="screen,projection" />
 
+
+
+	<!--Import jQuery before materialize.js-->
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
+		(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 		ga('create', 'UA-104121571-1', 'auto');
 		ga('send', 'pageview');
+	</script>
+
+	<script>
+					$(document).ready(function () {
+						$('.carousel.carousel-slider').carousel({ fullWidth: true });
+
+					});
 
 	</script>
-	
-	<div id="webGL-container">
-		<div id="heading-Container">
-		<h1><a class="heading" href="index.html"><span class="highlight">Gene</span> Space </a></h1>
+
+</head>
+
+<body>
+	<!-- ----------------------------MAIN------------------------- -->
+	<div class="row fixed z-100" id="scrollspy">
+		<div class="col hide-on-small-only m3">
+			<ul class="section table-of-contents">
+				<li>
+					<a href="#Projects" class="font-color-black font-size">Projects</a>
+				</li>
+				<li>
+					<a href="#Services" class="font-color-black font-size">Services</a>
+				</li>
+				<li>
+					<a href="#About" class="font-color-black font-size">About</a>
+				</li>
+				<li>
+					<a href="#Contact" class="font-color-black font-size">Contact</a>
+				</li>
+			</ul>
 		</div>
-	<!-- Three JS -->
-    <script type="text/javascript" src="js/THREE/three.js"></script>    
-    <script type="text/javascript" src="js/THREE/Projector.js"></script>
-    <script type="text/javascript" src="js/THREE/CanvasRenderer.js"></script>
-    <script type="text/javascript" src="js/THREE/OrbitControls.js"></script> 
-    <script type="text/javascript" src="js/THREE/WorldData.js"></script>
-	<script type="text/javascript" src="js/THREE/ThreeAnimator.js"></script> 
-	<script type="text/javascript" src="js/THREE/dat.gui.min.js"></script> 
-	<script type="text/javascript" src="js/THREE/Gyroscope.js"></script>
-
-	<!--Post Processing Stuff -->
-	<script type="text/javascript" src="js/THREE/EffectComposer.js"></script>
-    <script type="text/javascript" src="js/THREE/RenderPass.js"></script>
-	<script type="text/javascript" src="js/THREE/CopyShader.js"></script>
-	<script type="text/javascript" src="js/THREE/ShaderPass.js"></script>
-	<script type="text/javascript" src="js/THREE/BloomPass.js"></script>
-	<script type="text/javascript" src="js/THREE/ConvolutionShader.js"></script>
-	<script type="text/javascript" src="js/Shaders/Planet/DitherParameters.js"></script>
-	<script type="text/javascript" src="js/Helpers/ColorPalletes.js"></script>
-
-	<!--Helpers -->
-	<script type="text/javascript" src="js/Helpers/perlin.js"></script> 
-	<script type="text/javascript" src="js/Helpers/Vector2.js"></script> 
-	<script type="text/javascript" src="js/Helpers/MathUtils.js"></script> 
-	<script type="text/javascript" src="js/Helpers/OrbitUtils.js"></script> 
-    <script type="text/javascript" src="js/Helpers/PlanetInfo.js"></script> 
-	<script type="text/javascript" src="js/Loaders.js"></script> 
-	<script type="text/javascript" src="js/LaberGenerator.js"></script> 
-	<script type="text/javascript" src="js/GibbirishGenerator.js"></script> 
-
-	<!-- World Generator -->
-	<script type="text/javascript" src="js/WorldGenerator/FallOffGenerator.js"></script>  
-	<script type="text/javascript" src="js/WorldGenerator/MapGenerator.js"></script> 
-	<script type="text/javascript" src="js/WorldGenerator/Noise1D.js"></script> 
-	<script type="text/javascript" src="js/WorldGenerator/Noise2D.js"></script> 
-	<script type="text/javascript" src="js/WorldGenerator/NoiseFromTexture.js"></script> 
-	<script type="text/javascript" src="js/WorldGenerator/Regions.js"></script> 
-	
-
-	<!-- Main -->
-	<script type="text/javascript" src="js/main.js"></script>  
-
-	<!-- <a class="heading" href="index.html"><h1><span class="highlight">Gene</span> Space</h1></a> -->
-		<div>
-			<nav class = "Splash Nav">
-				<ul>
-					<li><a  class="splashLink" href="services.html">Services</a></li>
-					<li><a  class="splashLink" href="about.html">About</a></li>    
-					<li><a  class="splashLink" href="portfolio.html">Portfolio</a></li>
-					</ul>
-			</nav>    
-		</div>
-
-		<div>
-			<nav class = "UI-Tools-Nav">
-				<ul id = "UI-Tools-List">
-				</ul>
-			</nav>    
-		</div>
-		 
 	</div>
-				
-    </body>
+
+	<!------------------------------MAIN------------------------------>
+	<main>
+		<div class="row no-b-margin">
+
+			<div class="row no-b-margin">
+				<!-- ----------------------------SPLASH------------------------- -->
+				<div class="col s12 blue h-100vh splash-background  l2 exclude-h">
+				<div class="container centre position-b">
+						<div class="container centre position-b"></div>
+						<h2 class="t-align-c f-c-white splash-argo-f">Eugene Martens</h2>
+					<h5 class="t-align-c f-c-white">|Creative - Engineering|</h5>
+					<div class="container centre">
+							<a class="waves-effect waves-light btn" href="#Projects">Projects</a>
+							<a class="waves-effect waves-light btn" href="#Services">Services</a>
+							<a class="waves-effect waves-light btn" href="#Contact">Contact</a>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!-- ----------------------------SPLASH------------------------- -->
+
+			<!-- ----------------------------PROJECTS------------------------- -->
+			<div class="row no-b-margin scrollspy" id="Projects">
+				<nav class="nav-extended">
+					<div class="nav-wrapper">
+						<h2 href="#" class="t-align-l margin-a">Projects</h2>
+					</div>
+					<div class="nav-content">
+						<ul class="tabs tabs-transparent">
+							<li class="tab">
+								<a onclick="Init()" href="#1">Games</a>
+							</li>
+							<li class="tab">
+								<a onclick="Init()" href="#2">Art</a>
+							</li>
+							<li class="tab">
+								<a onclick="Init()" href="#3">Software</a>
+							</li>
+							<li class="tab disabled">
+								<a onclick="Init()" href="#4"></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<div id="1">
+					<div class="carousel carousel-slider center h-overwrite-500" data-indicators="true">
+						<div class="carousel-fixed-item center">
+							<a class="btn waves-effect white grey-text darken-text-2">button</a>
+						</div>
+						<div class="carousel-item red white-text" href="#one!">
+							<h2>First Panel</h2>
+							<p class="white-text">This is your first panel</p>
+						</div>
+						<div class="carousel-item amber white-text" href="#two!">
+							<h2>Second Panel</h2>
+							<p class="white-text">This is your second panel</p>
+						</div>
+						<div class="carousel-item green white-text" href="#three!">
+							<h2>Third Panel</h2>
+							<p class="white-text">This is your third panel</p>
+						</div>
+						<div class="carousel-item blue white-text" href="#four!">
+							<h2>Fourth Panel</h2>
+							<p class="white-text">This is your fourth panel</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="2">
+					<div class="carousel carousel-slider center h-overwrite-500" data-indicators="true">
+						<div class="carousel-fixed-item center">
+							<a class="btn waves-effect white grey-text darken-text-2">button</a>
+						</div>
+						<div class="carousel-item red white-text" href="#one!">
+							<h2>First Panel</h2>
+							<p class="white-text">This is your first panel</p>
+						</div>
+						<div class="carousel-item amber white-text" href="#two!">
+							<h2>Second Panel</h2>
+							<p class="white-text">This is your second panel</p>
+						</div>
+						<div class="carousel-item green white-text" href="#three!">
+							<h2>Third Panel</h2>
+							<p class="white-text">This is your third panel</p>
+						</div>
+						<div class="carousel-item blue white-text" href="#four!">
+							<h2>Fourth Panel</h2>
+							<p class="white-text">This is your fourth panel</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="3">
+					<div class="carousel carousel-slider center h-overwrite-500 " data-indicators="true">
+						<div class="carousel-fixed-item center">
+							<a class="btn waves-effect white grey-text darken-text-2">button</a>
+						</div>
+						<div class="carousel-item red white-text" href="#one!">
+							<h2>First Panel</h2>
+							<p class="white-text">This is your first panel</p>
+						</div>
+						<div class="carousel-item amber white-text" href="#two!">
+							<h2>Second Panel</h2>
+							<p class="white-text">This is your second panel</p>
+						</div>
+						<div class="carousel-item green white-text" href="#three!">
+							<h2>Third Panel</h2>
+							<p class="white-text">This is your third panel</p>
+						</div>
+						<div class="carousel-item blue white-text" href="#four!">
+							<h2>Fourth Panel</h2>
+							<p class="white-text">This is your fourth panel</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="4">
+					<div class="carousel carousel-slider center h-overwrite-500" data-indicators="true">
+						<div class="carousel-fixed-item center">
+							<a class="btn waves-effect white grey-text darken-text-2">button</a>
+						</div>
+						<div class="carousel-item red white-text" href="#one!">
+							<h2>First Panel</h2>
+							<p class="white-text">This is your first panel</p>
+						</div>
+						<div class="carousel-item amber white-text" href="#two!">
+							<h2>Second Panel</h2>
+							<p class="white-text">This is your second panel</p>
+						</div>
+						<div class="carousel-item green white-text" href="#three!">
+							<h2>Third Panel</h2>
+							<p class="white-text">This is your third panel</p>
+						</div>
+						<div class="carousel-item blue white-text" href="#four!">
+							<h2>Fourth Panel</h2>
+							<p class="white-text">This is your fourth panel</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- ----------------------------PROJECTS------------------------- -->
+
+			<!-- ----------------------------SERVICES------------------------- -->
+			<div class="row no-b-margin scrollspy" id="Services">
+				<div class="col s12 red h-100vh">
+					<h2 class="t-align-l">Services</h2>
+				</div>
+			</div>
+			<!-- ----------------------------SERVICES------------------------- -->
+
+			<!-- ----------------------------ABOUT------------------------- -->
+			<div class="row no-b-margin scrollspy" id="About">
+				<div class="col s12 orange h-100vh">
+					<h2 class="t-align-l">About</h2>
+					<div class="row">
+						<div class="container width-clamp-85 t-align-c">
+								<article class="main">
+
+									<p>
+										My name is Eugene Martens, recently graduated Game Designer and Artist.
+									</p>
+									<p>
+										Game Development is my main passion, everything from back end game engine structures to front end aesthetics creation are
+										all areas that I am interested in. So much goes into the development of a game, which in turn means always consistently
+										learning something new, a large part of why I enjoy Game development.
+									</p>
+
+									<p>
+										Visual aesthetics and design of a game are my main points of interest, as art, conceptional design and graphics programming
+										are areas I am most familiar and adept at.
+									</p>
+
+									<p>
+										Feel free to explore my website and check out some of my work
+									</p>
+
+								</article>		
+								<aside class="side">
+									<div class="dark">
+
+										<!-- <h3>What We Do</h3> !-->
+										<img src="./img/Eugene01.jpg" class="size">
+									</div>
+								</aside>
+								<div>
+								</div>				
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="card">
+								<div class="card-content padding-10 t-align-c">
+									<hr>
+									<h6 class="card-title t-align-c">PROFICIENT IN</h6>
+									<ul>
+												<p class="border-rounded padding-10">C# and Java</p>
+												<p class="border-rounded padding-10">HLSL/GLSL/CG</p>
+												<p class="border-rounded padding-10">JS</p>
+												<p class="border-rounded padding-10">HTML & CSS</p>							
+												<p class="border-rounded padding-10">Unity3D</p>
+												<p class="border-rounded padding-10">Visual Studio</p>
+												<p class="border-rounded padding-10">Pixel Art</p>
+												<p class="border-rounded padding-10">3D Modeling</p>
+												<p class="border-rounded padding-10">Blender</p>
+												<p class="border-rounded padding-10">3DS Max</p>
+												<p class="border-rounded padding-10">Rigging</p>
+												<p class="border-rounded padding-10">Website Development</p>
+												<p class="border-rounded padding-10">Characters Concepting</p>
+												<p class="border-rounded padding-10">WebGl/OpenGL</p>
+												<p class="border-rounded padding-10">Advanced Mathmatics</p>
+									<hr>
+									<h6 class="card-title t-align-c">AVERAGE KNOWLEDGE</h6>
+												<p class="border-rounded padding-10">Git</p>
+												<p class="border-rounded padding-10">C++ and C</p>
+												<p class="border-rounded padding-10">Angular</p>
+												<p class="border-rounded padding-10">ASP.NET</p>
+												<p class="border-rounded padding-10">FrontEnd MVC Development</p>
+												<p class="border-rounded padding-10">Backend MVC Development</p>
+												<p class="border-rounded padding-10">3D Animation in Maya/Blender/3DMax</p>
+												<p class="border-rounded padding-10">Landscape/Level Concept</p>
+												<p class="border-rounded padding-10">Project Managment</p>
+												<p class="border-rounded padding-10">Game Mechanics Development</p>											
+												<p class="border-rounded padding-10">Illustration & Concepting</p>
+												<p class="border-rounded padding-10">2D Animation in Flash/Photoshop/Asesprite</p>
+									<hr>
+									<h6 class="card-title t-align-c">SOME KNOWLEDGE</h6>
+												<p class="border-rounded padding-10">UI Creation and Implimentation</p>
+												<p class="border-rounded padding-10">Profiling & Monetization</p>
+												<p class="border-rounded padding-10">Maya</p>
+												<p class="border-rounded padding-10">SQL</p>
+												<p class="border-rounded padding-10">Logo Design</p>
+									</ul>
+									<hr>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ----------------------------ABOUT------------------------- -->
+
+		<!-- ----------------------------CONTACT------------------------- -->
+		<div class="row no-b-margin scrollspy" id="Contact">
+			<div class="col s12 red h-100vh">
+				<h2 class="t-align-l">Contact</h2>
+			</div>
+		</div>
+		<!-- ----------------------------CONTACT------------------------- -->
+
+
+		</div>
+	</main>
+	<!------------------------------MAIN------------------------------>
+	<!------------------------------MAIN------------------------------>
+	<footer class="page-footer blue footer-body ">
+		<div class="col s12">
+			<h6 class="t-align-c">LITH Studios, Copyright &copy; 2017</h6>
+		</div>
+	</footer>
+
+	<script>
+				$(document).ready(function () {
+					$('.scrollspy').scrollSpy({ scrollOffset: 0 });
+				});
+
+				// scrollspy
+
+				$(document).ready(function () {
+					$("#scrollspy").hide(); //hide your div initially
+					var topOfOthDiv = $("#Projects").offset().top;
+					$(window).scroll(function () {
+						if ($(window).scrollTop() > topOfOthDiv - 100) { //scrolled past the other div?
+							$("#scrollspy").fadeIn(); //reached the desired point -- show div
+						}
+						else {
+							$("#scrollspy").fadeOut();
+						}
+					});
+				});
+				function Init() {
+					$('.carousel.carousel-slider').carousel({ fullWidth: true });
+				}
+	</script>
+</body>
+
 </html>

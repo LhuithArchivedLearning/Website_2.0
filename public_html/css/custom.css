@@ -1,0 +1,258 @@
+
+html
+{
+    line-height: 1.0;
+}
+
+@font-face {
+    font-family: "Argo";
+    src: url(../fonts/ArgoFlats.ttf);
+}
+
+.splash-argo-f
+{
+    font-family: "Argo", Times, serif;
+    font-size: 100px;
+}
+
+.border-rounded
+{
+    background-color:#ff8a65;
+    border: 2px #ff8a65;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.position-b
+{
+    height: 35vh;
+}
+
+.exclude-h
+{
+    height: 100vh!important;
+}
+.splash-background
+{
+    background-image: url("../img/Creative_Engineering2.JPG");
+    filter: grayscale(40%);
+    background-repeat: no-repeat;
+    background-size: 225vh;
+    background-position-x: -100px;
+}
+
+.main
+{
+    float: right;
+    width: 70%;
+}
+
+.side
+{
+    float:left;
+}
+
+.width-clamp 
+{
+    max-width: 60%;
+}
+
+.width-clamp-85
+{
+    width: 85%;
+    max-width: 85%;
+}
+.padding-15
+{
+    padding: 15px;
+}
+
+.padding-10
+{
+    padding: 10px;
+}
+
+
+.card-overide
+{
+    padding:5px!important;
+    max-height: 260px;
+    min-height: 260px;
+}
+
+img.size
+{
+    max-width: 200px;
+}
+
+.h-100vh
+{
+    height: 100vh;
+}
+
+.h-overwrite-500
+{
+    height: 500px!important;
+}
+
+.t-align-c
+{
+    text-align: center;
+}
+
+.t-align-r
+{
+    text-align: right;
+}
+
+.t-align-l
+{
+    text-align: left;
+}
+
+.margin-a
+{
+    margin: auto;
+}
+.no-b-margin
+{
+    margin-bottom: 0px;
+}
+
+.no-padding-t-b
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.f-c-black
+{
+    color: #000000!important;
+}
+
+.f-c-white
+{
+    color: #ffffff!important;
+}
+
+.font-size
+{
+    font-size: 25px;
+}
+.blue
+{
+    background-color: #1976d2 ;
+}
+
+.green
+{
+    background-color: #81c784;
+}
+
+.yellow
+{
+    background-color: #fdd835;
+}
+
+.orange
+{
+    background-color: #ff8a65 ;
+}
+
+.gray
+{
+    background-color: #90a4ae;
+}
+
+.margin-overide
+{
+
+}
+
+.not-visible
+{
+    display: none;
+}
+
+.i-abs-left
+{
+    position: absolute;
+    top: 135vh;
+    z-index: 20000;
+    pointer-events: none;
+}
+.i-abs-right
+{
+    position: absolute;
+    top: 135vh;
+    left: auto;
+    right: 0%;
+    z-index: 20000;
+    pointer-events: none;
+}
+
+.i-size
+{
+    font-size: 50px!important;
+}
+
+.footer-body {
+    display: flex;
+    min-height: 5vh;
+    flex-direction: column;
+  }
+
+.footer-main 
+{
+    flex: 1 0 auto;
+}
+
+.centre
+{
+    margin: auto;
+    text-align: center;
+}
+
+.btn-block
+{
+    float: left;
+    display: block;
+}
+
+.absolute
+{
+    position: absolute;
+}
+
+.fixed
+{
+    position: fixed;
+    right: 0%;
+    top: auto;
+}
+
+.z-100
+{
+    z-index: 100;
+}
+
+@media (max-width: 600px)
+{
+    .col.s12
+    {
+        height: 100%;
+    }
+
+    .main,
+    .side
+    {
+        float: none;
+    }
+
+    .main
+    {
+        display: inline;
+        text-align: center;
+        width:75%;
+    }
+}
