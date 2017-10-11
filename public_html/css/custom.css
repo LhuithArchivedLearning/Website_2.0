@@ -9,6 +9,10 @@ html
     src: url(../fonts/ArgoFlats.ttf);
 }
 
+.width-clamp-100
+{
+    width: 100%!important;
+}
 .splash-argo-f
 {
     font-family: "Argo", Times, serif;
