@@ -25,20 +25,17 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script>
 		(function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date(); a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 		ga('create', 'UA-104121571-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 
 	<script>
-					$(document).ready(function () {
-						$('.carousel.carousel-slider').carousel({ fullWidth: true });
 
-					});
 
 	</script>
 
@@ -46,20 +43,20 @@
 
 <body>
 	<!-- ----------------------------MAIN------------------------- -->
-	<div class="row fixed z-100" id="scrollspy">
+	<div class="z-depth-3 orange row fixed z-100" id="scrollspy">
 		<div class="col hide-on-small-only m3">
-			<ul class="section table-of-contents">
+			<ul class="z-depth-3 section table-of-contents">
 				<li>
-					<a href="#Projects" class="font-color-black font-size">Projects</a>
+					<a href="#Projects" class="f-c-black font-size">Projects</a>
 				</li>
 				<li>
-					<a href="#Services" class="font-color-black font-size">Services</a>
+					<a href="#Services" class="f-c-black font-size">Services</a>
 				</li>
 				<li>
-					<a href="#About" class="font-color-black font-size">About</a>
+					<a href="#About" class="f-c-black font-size">About</a>
 				</li>
 				<li>
-					<a href="#Contact" class="font-color-black font-size">Contact</a>
+					<a href="#Contact" class="f-c-black font-size">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -72,87 +69,176 @@
 			<div class="row no-b-margin">
 				<!-- ----------------------------SPLASH------------------------- -->
 				<div class="col s12 blue h-100vh splash-background  l2 exclude-h width-clamp-100">
-				<div class="container centre position-b">
+					<div class="container centre position-b">
 						<div class="container centre position-b"></div>
 						<h2 class="t-align-c f-c-white splash-argo-f">Eugene Martens</h2>
-					<h5 class="t-align-c f-c-white">|Creative - Engineering|</h5>
-					<div class="container centre">
-							<a class="waves-effect waves-light btn" href="#Projects">Projects</a>
-							<a class="waves-effect waves-light btn" href="#Services">Services</a>
-							<a class="waves-effect waves-light btn" href="#Contact">Contact</a>
+						<h5 class="t-align-c f-c-white">|Creative - Engineering|</h5>
+						<div class="container centre">
+							<a class="z-depth-3 btn-floating btn-large waves-effect waves-light orange btn-width-100 t-align-c" href="#Projects">
+								<p class="m-t-22_5 cursor-select">Projects</p>
+							</a>
+							<a class="z-depth-3 btn-floating btn-large waves-effect waves-light orange btn-width-100" href="#Services">
+								<p class="m-t-22_5 cursor-select">Services</p>
+							</a>
+							<a class="z-depth-3 btn-floating btn-large waves-effect waves-light orange btn-width-100" href="#Contact">
+								<p class="m-t-22_5 cursor-select">Contact</p>
+							</a>
 						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 			<!-- ----------------------------SPLASH------------------------- -->
 
 			<!-- ----------------------------PROJECTS------------------------- -->
 			<div class="row no-b-margin scrollspy" id="Projects">
-				<nav class="nav-extended">
-					<div class="nav-wrapper">
-						<h2 href="#" class="t-align-l margin-a">Projects</h2>
+				<nav class="nav-extended orange">
+					<div class="z-depth-3 nav-wrapper min-h-5">
 					</div>
 					<div class="nav-content">
-						<ul class="tabs tabs-transparent">
-							<li class="tab">
-								<a onclick="Init()" href="#1">Games</a>
+						<ul class="tabs tabs-transparent warm-sun h-banner float-l display-flex">
+							<li class="tab flex-grow-1">
+								<div class="row white  h-banner h-banner-row">
+									<h2 class="neg-b-margin-13 f-c-black font-Upper t-align-l margin-a defualt">PROJECTS</h2>
+								</div>
 							</li>
-							<li class="tab">
-								<a onclick="Init()" href="#2">Art</a>
+							<li class="tab flex-grow-1">
+								<div class="row white">
+									<a class="f-c-black" onclick="Init()" href="#1">Games</a>
+								</div>
 							</li>
-							<li class="tab">
-								<a onclick="Init()" href="#3">Software</a>
+
+							<li class="tab flex-grow-1">
+								<div class="row white">
+									<a class="f-c-black" onclick="Init()" href="#2">Art</a>
+								</div>
 							</li>
-							<li class="tab disabled">
-								<a onclick="Init()" href="#4"></a>
+							<li class="tab flex-grow-1">
+								<div class="row white">
+									<a class="f-c-black" onclick="Init()" href="#3">Software</a>
+								</div>
 							</li>
-						</ul>
 					</div>
+					</ul>
 				</nav>
 
 				<div id="1">
-					<div class="carousel carousel-slider center h-overwrite-500" data-indicators="true">
-						<div class="carousel-fixed-item center">
-							<a class="btn waves-effect white grey-text darken-text-2">button</a>
+					<div class=" carousel carousel-slider center h-overwrite-500" data-indicators="true">
+
+						<div class="m-t-10 carousel-item no-color white-text" href="#one!">
+							<div class=" m-t-l-15 abs z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+								<div class=" m-t-l-15 abs UG-Back z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+									<div class="ultra-gods-Logo "></div>
+									<div class="defualt row">
+										<div class="col s6">
+											<article class="blur-back z-depth-5 t-align-l">
+												Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+												a battle for glory.
+												<br>
+												Lead Artist, Animation, Asset-Creation
+												<br>
+												PC
+												<br>
+												|Fighter |Brawler|Local Multiplayer|Indie|2D Platformer|
+												<br>
+												<div class="t-align-c">
+														<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+												</div>
+											</article>
+										</div>
+										<div class="col s6">
+											<div class="ultra-gods-Mascot"></div>
+										</div>
+									</div>
+
+									<div class="row">
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="carousel-item red white-text" href="#one!">
-							<h2>First Panel</h2>
-							<p class="white-text">This is your first panel</p>
+						<div class="m-t-10 carousel-item no-color white-text" href="#two!">
+							<div class=" m-t-l-15 abs z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+								<div class=" m-t-l-15 abs UG-Back z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+									<div class="ultra-gods-Logo "></div>
+									<div class="row">
+										<div class="col s12">
+											<article class="blur-back z-depth-5 t-align-l">
+												<hr> Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against
+												each other in a battle for glory.
+												<hr> Lead Artist, Animation, Asset-Creation
+												<hr> PC
+												<hr> |Fighter |Brawler|Local Multiplayer|Indie|2D Platformer|
+												<hr>
+											</article>
+										</div>
+										<div class="col s12">
+											<article class="blur-back z-depth-5 t-align-l">
+												<hr> Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against
+												each other in a battle for asdasdglory.
+												<hr> Lead Artist, Animation, Asset-Creation
+												<hr> PC
+												<hr> |Fighter |Brawler|Local Multiplayer|Indie|2D Platformer|
+												<hr>
+											</article>
+										</div>
+									</div>
+									<div class="row">
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="carousel-item amber white-text" href="#two!">
-							<h2>Second Panel</h2>
-							<p class="white-text">This is your second panel</p>
+						<div class="m-t-10 carousel-item no-color white-text" href="#three!">
+							<div class=" m-t-l-15 abs z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+								<div class=" m-t-l-15 abs UG-Back z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+									<div class="ultra-gods-Logo "></div>
+									<div class="row">
+										<article class="blur-back z-depth-5 t-align-l">
+											<hr> Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against
+											each other in a battle for glory.
+											<hr> Lead Artist, Animation, Asset-Creation
+											<hr> PC
+											<hr> |Fighter |Brawler|Local Multiplayer|Indie|2D Platformer|
+											<hr>
+										</article>
+									</div>
+									<div class="row">
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="carousel-item green white-text" href="#three!">
-							<h2>Third Panel</h2>
-							<p class="white-text">This is your third panel</p>
-						</div>
-						<div class="carousel-item blue white-text" href="#four!">
-							<h2>Fourth Panel</h2>
-							<p class="white-text">This is your fourth panel</p>
+						<div class="m-t-10 carousel-item no-color white-text" href="#four!">
+							<div class=" m-t-l-15 abs z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+								<div class=" m-t-l-15 abs UG-Back z-ind--2 w-96-h-93 container warm-sun z-depth-3">
+									<div class="ultra-gods-Logo "></div>
+									<div class="row">
+										<article class="blur-back z-depth-5 t-align-l">
+											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+											a battle for glory. Lead Artist, Animation, Asset-Creation PC |Fighter |Brawler|Local Multiplayer|Indie|2D Platformer|
+
+										</article>
+									</div>
+									<div class="row">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div id="2">
 					<div class="carousel carousel-slider center h-overwrite-500" data-indicators="true">
-						<div class="carousel-fixed-item center">
-							<a class="btn waves-effect white grey-text darken-text-2">button</a>
-						</div>
-						<div class="carousel-item red white-text" href="#one!">
+						<div class="m-t-10 carousel-item peach white-text" href="#one!">
 							<h2>First Panel</h2>
 							<p class="white-text">This is your first panel</p>
 						</div>
-						<div class="carousel-item amber white-text" href="#two!">
+						<div class="m-t-10 carousel-item amber white-text" href="#two!">
 							<h2>Second Panel</h2>
 							<p class="white-text">This is your second panel</p>
 						</div>
-						<div class="carousel-item green white-text" href="#three!">
+						<div class="m-t-10 carousel-item green white-text" href="#three!">
 							<h2>Third Panel</h2>
 							<p class="white-text">This is your third panel</p>
 						</div>
-						<div class="carousel-item blue white-text" href="#four!">
+						<div class="m-t-10 carousel-item blue white-text" href="#four!">
 							<h2>Fourth Panel</h2>
 							<p class="white-text">This is your fourth panel</p>
 						</div>
@@ -161,46 +247,19 @@
 
 				<div id="3">
 					<div class="carousel carousel-slider center h-overwrite-500 " data-indicators="true">
-						<div class="carousel-fixed-item center">
-							<a class="btn waves-effect white grey-text darken-text-2">button</a>
-						</div>
-						<div class="carousel-item red white-text" href="#one!">
+						<div class="m-t-10 carousel-item peach white-text" href="#one!">
 							<h2>First Panel</h2>
 							<p class="white-text">This is your first panel</p>
 						</div>
-						<div class="carousel-item amber white-text" href="#two!">
+						<div class="m-t-10 carousel-item amber white-text" href="#two!">
 							<h2>Second Panel</h2>
 							<p class="white-text">This is your second panel</p>
 						</div>
-						<div class="carousel-item green white-text" href="#three!">
+						<div class="m-t-10 carousel-item green white-text" href="#three!">
 							<h2>Third Panel</h2>
 							<p class="white-text">This is your third panel</p>
 						</div>
-						<div class="carousel-item blue white-text" href="#four!">
-							<h2>Fourth Panel</h2>
-							<p class="white-text">This is your fourth panel</p>
-						</div>
-					</div>
-				</div>
-
-				<div id="4">
-					<div class="carousel carousel-slider center h-overwrite-500" data-indicators="true">
-						<div class="carousel-fixed-item center">
-							<a class="btn waves-effect white grey-text darken-text-2">button</a>
-						</div>
-						<div class="carousel-item red white-text" href="#one!">
-							<h2>First Panel</h2>
-							<p class="white-text">This is your first panel</p>
-						</div>
-						<div class="carousel-item amber white-text" href="#two!">
-							<h2>Second Panel</h2>
-							<p class="white-text">This is your second panel</p>
-						</div>
-						<div class="carousel-item green white-text" href="#three!">
-							<h2>Third Panel</h2>
-							<p class="white-text">This is your third panel</p>
-						</div>
-						<div class="carousel-item blue white-text" href="#four!">
+						<div class="m-t-10 carousel-item blue white-text" href="#four!">
 							<h2>Fourth Panel</h2>
 							<p class="white-text">This is your fourth panel</p>
 						</div>
@@ -212,20 +271,49 @@
 			<!-- ----------------------------PROJECTS------------------------- -->
 
 			<!-- ----------------------------SERVICES------------------------- -->
-			<div class="row no-b-margin scrollspy" id="Services">
-				<div class="col s12 red h-100vh">
-					<h2 class="t-align-l">Services</h2>
+			<div class="row no-b-margin scrollspy peach-tinge1" id="Services">
+				<nav class="z-depth-3 nav-extended peach-tinge2">
+					<div class="nav-wrapper min-h-5">
+					</div>
+					<div class="nav-content">
+						<ul class="float-l h-banner warm-sun display-flex z-depth-3">
+							<li class="flex-grow-1">
+								<div class="row white  h-banner h-banner-row">
+									<h2 class="neg-b-margin-13 f-c-black font-Upper t-align-l margin-a defualt">SERVICES</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="col s12 h-100vh">
 				</div>
 			</div>
 			<!-- ----------------------------SERVICES------------------------- -->
 
 			<!-- ----------------------------ABOUT------------------------- -->
-			<div class="row no-b-margin scrollspy" id="About">
-				<div class="col s12 orange h-100vh">
-					<h2 class="t-align-l">About</h2>
-					<div class="row">
-						<div class="container width-clamp-85 t-align-c">
-								<article class="main">
+			<div class="row no-b-margin peach-tinge2 scrollspy" id="About">
+				<nav class="z-depth-3 nav-extended peach-tinge2">
+					<div class="nav-wrapper min-h-5">
+					</div>
+					<div class="nav-content">
+						<ul class="float-l h-banner warm-sun display-flex z-depth-3">
+							<li class="flex-grow-1">
+								<div class="row white h-banner-row h-banner">
+									<h2 class="neg-b-margin-13 f-c-black font-Upper t-align-l margin-a defualt"> About </h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+
+				<div class="col s12 h-100vh ">
+					<div class="col s12 h-100vh ">
+
+						<div class="row warm-sun padding-10 m-t-20 z-depth-3">
+							<div class=" white z-depth-3 padding-10">
+								<hr>
+								<article class="main defualt">
 
 									<p>
 										My name is Eugene Martens, recently graduated Game Designer and Artist.
@@ -245,79 +333,88 @@
 										Feel free to explore my website and check out some of my work
 									</p>
 
-								</article>		
-								<aside class="side">
-									<div class="dark">
+								</article>
 
-										<!-- <h3>What We Do</h3> !-->
-										<img src="./img/Eugene01.jpg" class="size">
-									</div>
+								<aside class="side">
+									<!-- <h3>What We Do</h3> !-->
+									<img src="./img/Eugene01.jpg" class=" z-depth-3 size border-rounded  padding-5 border-rad-20">
 								</aside>
-								<div>
-								</div>				
+								<hr>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col s12">
-							<div class="card">
-								<div class="card-content padding-10 t-align-c">
-									<hr>
-									<h6 class="card-title t-align-c">PROFICIENT IN</h6>
-									<ul>
-												<p class="border-rounded padding-10">C# and Java</p>
-												<p class="border-rounded padding-10">HLSL/GLSL/CG</p>
-												<p class="border-rounded padding-10">JS</p>
-												<p class="border-rounded padding-10">HTML & CSS</p>							
-												<p class="border-rounded padding-10">Unity3D</p>
-												<p class="border-rounded padding-10">Visual Studio</p>
-												<p class="border-rounded padding-10">Pixel Art</p>
-												<p class="border-rounded padding-10">3D Modeling</p>
-												<p class="border-rounded padding-10">Blender</p>
-												<p class="border-rounded padding-10">3DS Max</p>
-												<p class="border-rounded padding-10">Rigging</p>
-												<p class="border-rounded padding-10">Website Development</p>
-												<p class="border-rounded padding-10">Characters Concepting</p>
-												<p class="border-rounded padding-10">WebGl/OpenGL</p>
-												<p class="border-rounded padding-10">Advanced Mathmatics</p>
-									<hr>
-									<h6 class="card-title t-align-c">AVERAGE KNOWLEDGE</h6>
-												<p class="border-rounded padding-10">Git</p>
-												<p class="border-rounded padding-10">C++ and C</p>
-												<p class="border-rounded padding-10">Angular</p>
-												<p class="border-rounded padding-10">ASP.NET</p>
-												<p class="border-rounded padding-10">FrontEnd MVC Development</p>
-												<p class="border-rounded padding-10">Backend MVC Development</p>
-												<p class="border-rounded padding-10">3D Animation in Maya/Blender/3DMax</p>
-												<p class="border-rounded padding-10">Landscape/Level Concept</p>
-												<p class="border-rounded padding-10">Project Managment</p>
-												<p class="border-rounded padding-10">Game Mechanics Development</p>											
-												<p class="border-rounded padding-10">Illustration & Concepting</p>
-												<p class="border-rounded padding-10">2D Animation in Flash/Photoshop/Asesprite</p>
-									<hr>
-									<h6 class="card-title t-align-c">SOME KNOWLEDGE</h6>
-												<p class="border-rounded padding-10">UI Creation and Implimentation</p>
-												<p class="border-rounded padding-10">Profiling & Monetization</p>
-												<p class="border-rounded padding-10">Maya</p>
-												<p class="border-rounded padding-10">SQL</p>
-												<p class="border-rounded padding-10">Logo Design</p>
-									</ul>
-									<hr>
+						<div class="row warm-sun z-depth-3">
+							<div class="col s12">
+								<div class="card">
+									<div class="card-content padding-10 t-align-c">
+
+										<h6 class="card-title t-align-c defualt ">PROFICIENT IN</h6>
+										<ul>
+											<p class="card-p z-depth-3">C# and Java</p>
+											<p class="card-p z-depth-3">HLSL/GLSL/CG</p>
+											<p class="card-p z-depth-3">JS</p>
+											<p class="card-p z-depth-3">HTML & CSS</p>
+											<p class="card-p z-depth-3">Unity3D</p>
+											<p class="card-p z-depth-3">Visual Studio</p>
+											<p class="card-p z-depth-3">Pixel Art</p>
+											<p class="card-p z-depth-3">3D Modeling</p>
+											<p class="card-p z-depth-3">Blender</p>
+											<p class="card-p z-depth-3">3DS Max</p>
+											<p class="card-p z-depth-3">Rigging</p>
+											<p class="card-p z-depth-3">Website Development</p>
+											<p class="card-p z-depth-3">WebGl/OpenGL</p>
+											<p class="card-p z-depth-3">Advanced Mathmatics</p>
+
+											<h6 class="card-title t-align-c">AVERAGE KNOWLEDGE</h6>
+											<p class="card-p z-depth-3">Characters Concepting</p>
+											<p class="card-p z-depth-3">Git</p>
+											<p class="card-p z-depth-3">C++ and C</p>
+											<p class="card-p z-depth-3">Angular</p>
+											<p class="card-p z-depth-3">ASP.NET</p>
+											<p class="card-p z-depth-3">FrontEnd MVC Development</p>
+											<p class="card-p z-depth-3">Backend MVC Development</p>
+											<p class="card-p z-depth-3">3D Animation in Maya/Blender/3DMax</p>
+											<p class="card-p z-depth-3">Landscape/Level Concept</p>
+											<p class="card-p z-depth-3">Project Managment</p>
+											<p class="card-p z-depth-3">Game Mechanics Development</p>
+											<p class="card-p z-depth-3">Illustration & Concepting</p>
+											<p class="card-p z-depth-3">2D Animation in Flash/Photoshop/Asesprite</p>
+
+											<h6 class="card-title t-align-c">SOME KNOWLEDGE</h6>
+											<p class="card-p z-depth-3">UI Creation and Implimentation</p>
+											<p class="card-p z-depth-3">Profiling & Monetization</p>
+											<p class="card-p z-depth-3">Maya</p>
+											<p class="card-p z-depth-3">SQL</p>
+											<p class="card-p z-depth-3">Logo Design</p>
+										</ul>
+
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- ----------------------------ABOUT------------------------- -->
+			<!-- ----------------------------ABOUT------------------------- -->
 
-		<!-- ----------------------------CONTACT------------------------- -->
-		<div class="row no-b-margin scrollspy" id="Contact">
-			<div class="col s12 red h-100vh">
-				<h2 class="t-align-l">Contact</h2>
+			<!-- ----------------------------CONTACT------------------------- -->
+			<div class="row no-b-margin scrollspy" id="Contact">
+				<nav class="z-depth-3 nav-extended peach-tinge2">
+					<div class="nav-wrapper min-h-5">
+					</div>
+					<div class="nav-content">
+						<ul class="float-l h-banner warm-sun display-flex z-depth-3">
+							<li class="flex-grow-1">
+								<div class="row white h-banner-row h-banner" id="About">
+									<h2 class="neg-b-margin-13 f-c-black font-Upper t-align-l margin-a defualt"> Contact </h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="col s12 h-100vh">
+				</div>
 			</div>
-		</div>
-		<!-- ----------------------------CONTACT------------------------- -->
+			<!-- ----------------------------CONTACT------------------------- -->
 
 
 		</div>
@@ -331,27 +428,28 @@
 	</footer>
 
 	<script>
-				$(document).ready(function () {
-					$('.scrollspy').scrollSpy({ scrollOffset: 0 });
-				});
+		$(document).ready(function () {
+			$('.carousel.carousel-slider').carousel({ fullWidth: true });
+			$('.scrollspy').scrollSpy({ scrollOffset: 0 });
+		});
 
-				// scrollspy
+		// scrollspy
 
-				$(document).ready(function () {
-					$("#scrollspy").hide(); //hide your div initially
-					var topOfOthDiv = $("#Projects").offset().top;
-					$(window).scroll(function () {
-						if ($(window).scrollTop() > topOfOthDiv - 100) { //scrolled past the other div?
-							$("#scrollspy").fadeIn(); //reached the desired point -- show div
-						}
-						else {
-							$("#scrollspy").fadeOut();
-						}
-					});
-				});
-				function Init() {
-					$('.carousel.carousel-slider').carousel({ fullWidth: true });
+		$(document).ready(function () {
+			$("#scrollspy").hide(); //hide your div initially
+			var topOfOthDiv = $("#Projects").offset().top;
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > topOfOthDiv - 100) { //scrolled past the other div?
+					$("#scrollspy").fadeIn(); //reached the desipeach point -- show div
 				}
+				else {
+					$("#scrollspy").fadeOut();
+				}
+			});
+		});
+		function Init() {
+			$('.carousel.carousel-slider').carousel({ fullWidth: true });
+		}
 	</script>
 </body>
 
