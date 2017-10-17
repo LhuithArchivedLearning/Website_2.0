@@ -1,0 +1,511 @@
+/* --------------------------------------------------------------------------------------------------*/ 
+/* --------------------------------------------------------------------------------------------------*/ 
+.D67-Logo
+{
+    background-image: url("../img/Dimension67_Logo.png");
+    background-repeat: no-repeat;
+    filter: saturate(87%);
+    background-size: 51vh;
+    background-position-x: 13px;
+    background-position-y: 8px;
+    height: 156px;
+    width: 99%;
+    top: 70%;
+    z-index: 3;
+    top: 0%;
+    image-rendering: pixelated;
+}
+
+
+
+.D-67-Mascot
+{
+    background-image: url(../img/D-67-Mascot.png);
+    background-repeat: no-repeat;
+    filter: saturate(87%);
+    background-size: 50vh;
+    /* background-position-x: 460px; */
+    /* background-position-y: 78px; */
+    height: 493px;
+    position: fixed;
+    right: 0%;
+    left: 49%;
+    width: 101%;
+    top: 29%;
+    image-rendering: pixelated;
+    /* z-index: 3; */
+    /* top: 0%; */
+}
+
+.D67-Back 
+{
+    background: url("../img/Dimension67_Background.png") 0 / cover fixed;
+    background-position: center;
+    filter: grayscale(7%);
+  }
+
+.D67-blur-back::before 
+{
+    background: url("../img/Dimension67_Background.png") 0 / cover fixed;
+    background-position: center;
+  }
+
+.D67-blur-back 
+{
+    margin: 30px auto;
+position: relative;
+padding: 22px;
+background: hsla(0, 0%, 100%, 0.2);
+/* font-size: 20px; */
+/* font-family: 'Lora', serif; */
+line-height: 1.5;
+width: 97%;
+overflow: hidden;
+border-radius: 25px;
+}
+
+
+.D67-blur-back::before {
+content: '';
+margin: -35px;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+filter: blur(20px);
+z-index: -1;
+}
+
+/* --------------------------------------------------------------------------------------------------*/ 
+/* --------------------------------------------------------------------------------------------------*/ 
+
+.ultra-gods-Logo
+{
+    background-image: url(../img/UltraGods_Logo2.png);
+    background-repeat: no-repeat;
+    filter: saturate(87%);
+    background-size: 100%;
+    /* background-position-x: 13px; */
+    /* background-position-y: -3px; */
+    height: 119px;
+    width: 50%;
+    top: 70%;
+    z-index: 3;
+    top: 0%;
+    
+}
+
+.ultra-gods-Mascot
+{
+    background-image: url(../img/UG_Mascot.png);
+    background-repeat: no-repeat;
+    filter: saturate(87%);
+    background-size: 41vh;
+    /* background-position-x: 460px; */
+    /* background-position-y: 78px; */
+    height: 493px;
+    position: fixed;
+    right: 0%;
+    left: 49%;
+    width: 101%;
+    top: 10%;
+    /* z-index: 3; */
+    /* top: 0%; */
+}
+
+.UG-Back {
+    background: url("../img/UltraGods.png") 0 / cover fixed;
+    background-position: center;
+    filter: grayscale(7%);
+  }
+
+.blur-back::before {
+    background: url("../img/UltraGods.png") 0 / cover fixed;
+    background-position: center;
+  }
+  
+  .blur-back {
+    margin: 30px auto;
+    position: relative;
+    padding: 22px;
+    background: hsla(0, 0%, 100%, 0.2);
+    /* font-size: 20px; */
+    /* font-family: 'Lora', serif; */
+    line-height: 1.5;
+    width: 97%;
+    overflow: hidden;
+    border-radius: 5px;
+    color: ivory;
+    font-weight: 900;
+  }
+  
+  .blur-back::before {
+    content: '';
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+
+  .ultra-gods-Logo
+  {
+      background-image: url(../img/UltraGods_Logo2.png);
+      background-repeat: no-repeat;
+      filter: saturate(87%);
+      background-size: 100%;
+      /* background-position-x: 13px; */
+      /* background-position-y: -3px; */
+      height: 119px;
+      width: 50%;
+      top: 70%;
+      z-index: 3;
+      top: 0%;
+      
+  }
+  
+  .ultra-gods-Mascot
+  {
+      background-image: url(../img/UG_Mascot.png);
+      background-repeat: no-repeat;
+      filter: saturate(87%);
+      background-size: 41vh;
+      /* background-position-x: 460px; */
+      /* background-position-y: 78px; */
+      height: 493px;
+      position: fixed;
+      right: 0%;
+      left: 49%;
+      width: 101%;
+      top: 10%;
+      /* z-index: 3; */
+      /* top: 0%; */
+  }
+ /* --------------------------------------------------------------------------------------------------*/ 
+ /* --------------------------------------------------------------------------------------------------*/ 
+  
+ .LO-Logo
+ {
+     background-image: url(../img/LO_Logo.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 100%;
+     /* background-position-x: 13px; */
+     /* background-position-y: -3px; */
+     height: 119px;
+     width: 50%;
+     top: 70%;
+     z-index: 3;
+     top: 0%;
+     
+ }
+ 
+ .LO-Mascot
+ {
+     background-image: url(../img/UG_Mascot.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 41vh;
+     /* background-position-x: 460px; */
+     /* background-position-y: 78px; */
+     height: 493px;
+     position: fixed;
+     right: 0%;
+     left: 49%;
+     width: 101%;
+     top: 10%;
+     /* z-index: 3; */
+     /* top: 0%; */
+ }
+
+ 
+ 
+    .LO-Back {
+      background: url("../img/teneb_orig.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+  
+   .LO-blur-back::before {
+      background: url("../img/teneb_orig.png") 0 / cover fixed;
+      background-position: center;
+    }
+    
+    .LO-blur-back {
+      margin: 30px auto;
+      position: relative;
+      padding: 22px;
+      background: hsla(0, 0%, 100%, 0.2);
+      /* font-size: 20px; */
+      /* font-family: 'Lora', serif; */
+      line-height: 1.5;
+      width: 97%;
+      overflow: hidden;
+      border-radius: 5px;
+      color: ivory;
+      font-weight: 900;
+    }
+    
+    .LO-blur-back::before {
+      content: '';
+      margin: -35px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(10px);
+      z-index: -1;
+    }
+    
+  /* --------------------------------------------------------------------------------------------------*/ 
+  /* --------------------------------------------------------------------------------------------------*/ 
+
+  /* --------------------------------------------------------------------------------------------------*/ 
+ /* --------------------------------------------------------------------------------------------------*/ 
+  
+ .C-Logo
+ {
+     background-image: url(../img/Calm_Logo.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 100%;
+     /* background-position-x: 13px; */
+     /* background-position-y: -3px; */
+     height: 146px;
+     width: 50%;
+     top: 70%;
+     z-index: 3;
+     top: 0%;
+     
+ }
+ 
+ .C-Mascot
+ {
+     background-image: url(../img/UG_Mascot.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 41vh;
+     /* background-position-x: 460px; */
+     /* background-position-y: 78px; */
+     height: 493px;
+     position: fixed;
+     right: 0%;
+     left: 49%;
+     width: 101%;
+     top: 10%;
+     /* z-index: 3; */
+     /* top: 0%; */
+ }
+
+ 
+ 
+    .C-Back {
+      background: url("../img/Calm.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+  
+   .C-blur-back::before {
+      background: url("../img/Calm.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+    
+    .C-blur-back {
+      margin: 30px auto;
+      position: relative;
+      padding: 22px;
+      background: hsla(0, 0%, 100%, 0.2);
+      /* font-size: 20px; */
+      /* font-family: 'Lora', serif; */
+      line-height: 1.5;
+      width: 97%;
+      overflow: hidden;
+      border-radius: 5px;
+      color: ivory;
+      font-weight: 900;
+    }
+    
+    .C-blur-back::before {
+      content: '';
+      margin: -35px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(20px);
+      z-index: -1;
+    }
+    
+  /* --------------------------------------------------------------------------------------------------*/ 
+  /* --------------------------------------------------------------------------------------------------*/ 
+
+    /* --------------------------------------------------------------------------------------------------*/ 
+ /* --------------------------------------------------------------------------------------------------*/ 
+  
+ .M-Logo
+ {
+     background-image: url(../img/mamaro_Logo.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 100%;
+     /* background-position-x: 13px; */
+     /* background-position-y: -3px; */
+     height: 146px;
+     width: 50%;
+     top: 70%;
+     z-index: 3;
+     top: 0%;
+     
+ }
+ 
+ .M-Mascot
+ {
+     background-image: url(../img/UG_Mascot.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 41vh;
+     /* background-position-x: 460px; */
+     /* background-position-y: 78px; */
+     height: 493px;
+     position: fixed;
+     right: 0%;
+     left: 49%;
+     width: 101%;
+     top: 10%;
+     /* z-index: 3; */
+     /* top: 0%; */
+ }
+
+ 
+ 
+    .M-Back {
+      background: url("../img/mamaro_BackGround.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+  
+   .M-blur-back::before {
+      background: url("../img/mamaro_BackGround.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+    
+    .M-blur-back {
+      margin: 30px auto;
+      position: relative;
+      padding: 22px;
+      background: hsla(0, 0%, 100%, 0.2);
+      /* font-size: 20px; */
+      /* font-family: 'Lora', serif; */
+      line-height: 1.5;
+      width: 97%;
+      overflow: hidden;
+      border-radius: 5px;
+      color: ivory;
+      font-weight: 900;
+    }
+    
+    .M-blur-back::before {
+      content: '';
+      margin: -35px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(20px);
+      z-index: -1;
+    }
+    
+  /* --------------------------------------------------------------------------------------------------*/ 
+  /* --------------------------------------------------------------------------------------------------*/ 
+
+  
+    /* --------------------------------------------------------------------------------------------------*/ 
+ /* --------------------------------------------------------------------------------------------------*/ 
+  
+ .SPP-Logo
+ {
+     background-image: url(../img/Super_Princess_Peach_Logo.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 100%;
+     /* background-position-x: 13px; */
+     /* background-position-y: -3px; */
+     height: 146px;
+     width: 50%;
+     top: 70%;
+     z-index: 3;
+     top: 0%;
+     
+ }
+ 
+ .SPP-Mascot
+ {
+     background-image: url(../img/UG_Mascot.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 41vh;
+     /* background-position-x: 460px; */
+     /* background-position-y: 78px; */
+     height: 493px;
+     position: fixed;
+     right: 0%;
+     left: 49%;
+     width: 101%;
+     top: 10%;
+     /* z-index: 3; */
+     /* top: 0%; */
+ }
+
+ 
+ 
+    .SPP-Back {
+      background: url("../img/SPP_Background.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+  
+   .SPP-blur-back::before {
+      background: url("../img/SPP_Background.png") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+    
+    .SPP-blur-back {
+      margin: 30px auto;
+      position: relative;
+      padding: 22px;
+      background: hsla(0, 0%, 100%, 0.2);
+      /* font-size: 20px; */
+      /* font-family: 'Lora', serif; */
+      line-height: 1.5;
+      width: 97%;
+      overflow: hidden;
+      border-radius: 5px;
+      color: ivory;
+      font-weight: 900;
+    }
+    
+    .SPP-blur-back::before {
+      content: '';
+      margin: -35px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(20px);
+      z-index: -1;
+    }
+    
+  /* --------------------------------------------------------------------------------------------------*/ 
+  /* --------------------------------------------------------------------------------------------------*/ 

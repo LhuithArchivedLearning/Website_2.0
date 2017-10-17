@@ -1,0 +1,3 @@
+- Jazz Up content
+-Fix Background color scheme (Gradient)
+-Fix Resize issues
