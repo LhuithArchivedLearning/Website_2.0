@@ -15,23 +15,87 @@
 }
 
 @font-face {
-    font-family: "Monk";
-    src: url('../fonts/monk-webfont.woff2') format('woff2'),
-    url('../fonts/monk-webfont.woff') format('woff');
-font-weight: normal;
-font-style: normal;
+    font-family: "CL";
+    src: url(../fonts/ChampagneLimousines.ttf);
 }
 
 
+@font-face {
+    font-family: "M500";
+    src: url('../fonts/Museo500.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mohave";
+    src: url('../fonts/Mohave.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MohaveBold";
+    src: url('../fonts/Mohave-Bold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MohaveSemiBold";
+    src: url('../fonts/Mohave-SemiBold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face
+{
+    font-family:"Flat";
+    src: url("../fonts/Flatform_Light.otf") format("opentype");
+}
 
 body
 {
     /*background: linear-gradient( #ff6e74,#bfe9ff); /* Standard syntax */
     /*background: linear-gradient( #ffb88c,#de6262); /* Standard syntax */
    /* background: linear-gradient(var(--warm-sun),#1E2121); /* Standard syntax */
-    background: linear-gradient(#ffc46b, #a5cc82, #00467f); /* Standard syntax */
+    background: linear-gradient(#FBFABB,#FBFABB, #00467f); /* Standard syntax */
+    font-family: "Flat", Times, serif;
+    font-size: 10px;
 }
 
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: "MohaveBold", Times, serif;
+    cursor: default;
+}
+
+.content-display
+{
+    display: inline-grid;
+}
+
+.content-display-grid
+{
+    display: grid!important;
+}
+
+.social-twit-col
+{
+    background-color:  #56ABEE;
+}
+
+.social-linked-col
+{
+    background-color:  #097BB4;
+}
+
+.social-git-col
+{
+    background-color:  #464646;
+}
 
 
 .f-c-black
@@ -121,18 +185,6 @@ html
     cursor: pointer;
 }
 
-
-p,h1,h2,h3,h4,h5,h6
-{
-    cursor: default;
-}
-
-h2
-{
-    font-family: "Monk", Times, serif;
-}
-
-
 .c
 {
     display: table;
@@ -179,14 +231,14 @@ h2
     width: 100%!important;
 }
 
+.min-h-595
+{
+    min-height: 595px;
+}
+
 .width-clamp-800
 {
     max-width: 800px;
-}
-
-.width-clamp-100
-{
-    width: 100%!important;
 }
 
 .height-clamp-60
@@ -221,14 +273,14 @@ h2
 }
 .splash-argo-f
 {
-    font-family: "Monk", Times, serif;
-    font-size: 100px;
+    font-family: "Argo", Times, serif;
+    font-size: 85px;
 }
 
 .border-rounded
 {
-    background-color:#ff8a65;
-    border: 2px #ff8a65;
+    background-color:#56ABEE;
+    border: 2px #56ABEE;
     border-radius: 15px;
     display: inline-block;
 }
@@ -278,11 +330,39 @@ border-radius: 5px;
     background-position-x: -100px;
 }
 
+.d-grid
+{
+    display: grid;
+}
+
 .main
 {
     float: right;
     width: 70%!important;   
     font-size: 17px;
+}
+
+.m-t-45
+{
+    margin-top:  45px;
+}
+
+.img-clamp
+{
+    max-width: 288px;
+    max-height: 215px;
+    min-width: 288px;
+    min-height: 215px;
+}
+
+.m-t-130
+{
+    margin-top: 130px
+}
+
+.m-t-75
+{
+    margin-top: 75px;
 }
 
 .m-t-20
@@ -378,10 +458,9 @@ border-radius: 5px;
     min-height: 322px;
 }
 
-.btn-width-100
+.width-100
 {
     width: 100px!important;
-    height: 100px!important;
 }
 
 .card-overide
@@ -391,14 +470,16 @@ border-radius: 5px;
     min-height: 260px;
 }
 
+
 .card-p
 {
-    background-color:#ff8a65;
+    background-color:#fafafa;
     border: 2px #ff8a65;
-    border-radius: 15px;
+    border-radius: 4px;
     display: inline-block;
-    padding: 10px;
-    margin: 1px!important;
+    padding: 3px;
+    margin: 3px!important;
+    font-size: small;
 }
 
 
@@ -531,7 +612,7 @@ img.size
 
 .tabs .tab
 {
-    line-height: 41px!important;
+    line-height: 52px!important;
     height: 41px;
 }
 
@@ -547,7 +628,7 @@ img.size
 
 .ul-grid
 {
-    height: 62px;
+    height: 73px;
 }
 
 .tabs .indicator
@@ -640,6 +721,11 @@ img.size
     flex: 1 0 auto;
 }
 
+.f-size-17
+{
+    font-size: 17px;
+}
+
 .centre
 {
     margin: auto;
@@ -667,6 +753,7 @@ img.size
 .defualt
 {
     cursor: default;
+    user-select: none;
 }
 .w-90
 {
@@ -705,9 +792,34 @@ img.size
 }
 
 
-
 @media (max-width: 600px)
 {
+
+    .row .col.s5,
+    .row .col.s7
+    {
+        width: auto;
+        float: none;
+    }
+    .btn, .btn-large, .btn-flat
+    {
+        padding: 0px 1rem;
+    }
+    .button-text-margin
+    {
+        margin-top: 15px
+    }
+    .btn-display
+    {
+        height: 300px;
+        display: grid;
+    }
+
+    .a-height
+    {
+        height: 60%;
+        margin: auto;
+    }
 
     .height-clamp-85vh
     {
@@ -715,7 +827,7 @@ img.size
     }
     .m-b-7
     {
-        margin-bottom: 7px!important
+        margin-bottom: 45px!important
     }
     
 
@@ -752,10 +864,6 @@ img.size
         overflow-y: hidden;
         
     }
-    .h-banner-35
-    {
-        padding: 10px;
-    }
     .tabs .tab
     {
         height: 46px;
@@ -783,7 +891,7 @@ img.size
 
     .position-b 
     {
-        height: auto;
+        height: 22vh;
     }
 }
 

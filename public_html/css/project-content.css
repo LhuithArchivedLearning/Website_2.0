@@ -5,11 +5,13 @@
     background-image: url("../img/Dimension67_Logo.png");
     background-repeat: no-repeat;
     filter: saturate(87%);
-    background-size: 51vh;
+    background-size: 42vh;
     background-position-x: 13px;
     background-position-y: 8px;
     height: 156px;
     width: 99%;
+    max-width: 400px;
+    min-width: 200px;
     top: 70%;
     z-index: 3;
     top: 0%;
@@ -42,6 +44,7 @@
     background: url("../img/Dimension67_Background.png") 0 / cover fixed;
     background-position: center;
     filter: grayscale(7%);
+    min-height: 595px;
   }
 
 .D67-blur-back::before 
@@ -52,29 +55,32 @@
 
 .D67-blur-back 
 {
-    margin: 30px auto;
-position: relative;
-padding: 22px;
-background: hsla(0, 0%, 100%, 0.2);
-/* font-size: 20px; */
-/* font-family: 'Lora', serif; */
-line-height: 1.5;
-width: 97%;
-overflow: hidden;
-border-radius: 25px;
+  margin: 30px auto;
+  position: relative;
+  padding: 22px;
+  background: hsla(0, 0%, 100%, 0.2);
+  /* font-size: 20px; */
+  /* font-family: 'Lora', serif; */
+  line-height: 1.5;
+  width: 97%;
+  overflow: hidden;
+  border-radius: 5px;
+  color: ivory;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 
 .D67-blur-back::before {
-content: '';
-margin: -35px;
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-filter: blur(20px);
-z-index: -1;
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  z-index: -1;
 }
 
 /* --------------------------------------------------------------------------------------------------*/ 
@@ -88,8 +94,10 @@ z-index: -1;
     background-size: 100%;
     /* background-position-x: 13px; */
     /* background-position-y: -3px; */
-    height: 119px;
-    width: 50%;
+    height: 130px;
+    width: 99%;
+    max-width: 400px;
+    min-width: 200px;
     top: 70%;
     z-index: 3;
     top: 0%;
@@ -118,6 +126,7 @@ z-index: -1;
     background: url("../img/UltraGods.png") 0 / cover fixed;
     background-position: center;
     filter: grayscale(7%);
+    min-height: 595px;
   }
 
 .blur-back::before {
@@ -138,6 +147,7 @@ z-index: -1;
     border-radius: 5px;
     color: ivory;
     font-weight: 900;
+    font-size: 18px;
   }
   
   .blur-back::before {
@@ -148,26 +158,10 @@ z-index: -1;
     right: 0;
     bottom: 0;
     left: 0;
-    filter: blur(10px);
+    filter: blur(20px);
     z-index: -1;
   }
 
-
-  .ultra-gods-Logo
-  {
-      background-image: url(../img/UltraGods_Logo2.png);
-      background-repeat: no-repeat;
-      filter: saturate(87%);
-      background-size: 100%;
-      /* background-position-x: 13px; */
-      /* background-position-y: -3px; */
-      height: 119px;
-      width: 50%;
-      top: 70%;
-      z-index: 3;
-      top: 0%;
-      
-  }
   
   .ultra-gods-Mascot
   {
@@ -198,7 +192,9 @@ z-index: -1;
      /* background-position-x: 13px; */
      /* background-position-y: -3px; */
      height: 119px;
-     width: 50%;
+     width: 99%;
+     max-width: 400px;
+     min-width: 200px;
      top: 70%;
      z-index: 3;
      top: 0%;
@@ -229,6 +225,7 @@ z-index: -1;
       background: url("../img/teneb_orig.png") 0 / cover fixed;
       background-position: center;
       filter: grayscale(7%);
+      min-height: 595px;
     }
   
    .LO-blur-back::before {
@@ -249,6 +246,7 @@ z-index: -1;
       border-radius: 5px;
       color: ivory;
       font-weight: 900;
+      font-size: 18px;
     }
     
     .LO-blur-back::before {
@@ -278,11 +276,13 @@ z-index: -1;
      /* background-position-x: 13px; */
      /* background-position-y: -3px; */
      height: 146px;
-     width: 50%;
+     width: 99%;
+     max-width: 325px;
+     min-width: 200px;
      top: 70%;
      z-index: 3;
-     top: 0%;
-     
+     top: 0%; 
+     margin-top: -31px;
  }
  
  .C-Mascot
@@ -309,6 +309,7 @@ z-index: -1;
       background: url("../img/Calm.png") 0 / cover fixed;
       background-position: center;
       filter: grayscale(7%);
+      min-height: 595px;
     }
   
    .C-blur-back::before {
@@ -330,6 +331,7 @@ z-index: -1;
       border-radius: 5px;
       color: ivory;
       font-weight: 900;
+      font-size: 18px;
     }
     
     .C-blur-back::before {
@@ -359,7 +361,9 @@ z-index: -1;
      /* background-position-x: 13px; */
      /* background-position-y: -3px; */
      height: 146px;
-     width: 50%;
+     width: 99%;
+     max-width: 400px;
+     min-width: 200px;
      top: 70%;
      z-index: 3;
      top: 0%;
@@ -390,6 +394,7 @@ z-index: -1;
       background: url("../img/mamaro_BackGround.png") 0 / cover fixed;
       background-position: center;
       filter: grayscale(7%);
+      min-height: 595px;
     }
   
    .M-blur-back::before {
@@ -411,6 +416,7 @@ z-index: -1;
       border-radius: 5px;
       color: ivory;
       font-weight: 900;
+      font-size: 18px;
     }
     
     .M-blur-back::before {
@@ -437,15 +443,16 @@ z-index: -1;
      background-image: url(../img/Super_Princess_Peach_Logo.png);
      background-repeat: no-repeat;
      filter: saturate(87%);
-     background-size: 100%;
+     background-size: 80%;
      /* background-position-x: 13px; */
      /* background-position-y: -3px; */
-     height: 146px;
-     width: 50%;
+     height: 150px;
+     width: 99%;
+     max-width: 400px;
+     min-width: 200px;
      top: 70%;
      z-index: 3;
      top: 0%;
-     
  }
  
  .SPP-Mascot
@@ -472,6 +479,7 @@ z-index: -1;
       background: url("../img/SPP_Background.png") 0 / cover fixed;
       background-position: center;
       filter: grayscale(7%);
+      min-height: 595px;
     }
   
    .SPP-blur-back::before {
@@ -493,6 +501,7 @@ z-index: -1;
       border-radius: 5px;
       color: ivory;
       font-weight: 900;
+      font-size: 18px;
     }
     
     .SPP-blur-back::before {
@@ -507,5 +516,111 @@ z-index: -1;
       z-index: -1;
     }
     
+  /* --------------------------------------------------------------------------------------------------*/ 
+  /* --------------------------------------------------------------------------------------------------*/ 
+
+  
+  
+    /* --------------------------------------------------------------------------------------------------*/ 
+ /* --------------------------------------------------------------------------------------------------*/ 
+  
+ .P-Logo
+ {
+  background-image: url(../img/Pinch_Logo.png);
+  background-repeat: no-repeat;
+  filter: saturate(87%);
+  background-size: 100%;
+  /* background-position-x: 13px; */
+  /* background-position-y: -3px; */
+  height: 146px;
+  width: 99%;
+  max-width: 320px;
+  min-width: 200px;
+  top: 70%;
+  z-index: 3;
+  top: 0%;
+ }
+ 
+ .P-Mascot
+ {
+     background-image: url(../img/UG_Mascot.png);
+     background-repeat: no-repeat;
+     filter: saturate(87%);
+     background-size: 41vh;
+     /* background-position-x: 460px; */
+     /* background-position-y: 78px; */
+     height: 493px;
+     position: fixed;
+     right: 0%;
+     left: 49%;
+     width: 101%;
+     top: 10%;
+     /* z-index: 3; */
+     /* top: 0%; */
+ }
+
+ 
+ 
+    .P-Back {
+      background: url("../img/Pinch_background.jpg") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+      min-height: 595px;
+    }
+  
+   .P-blur-back::before {
+      background: url("../img/Pinch_background.jpg") 0 / cover fixed;
+      background-position: center;
+      filter: grayscale(7%);
+    }
+    
+    .P-blur-back {
+      margin: 30px auto;
+      position: relative;
+      padding: 22px;
+      background: hsla(0, 0%, 100%, 0.2);
+      /* font-size: 20px; */
+      /* font-family: 'Lora', serif; */
+      line-height: 1.5;
+      width: 97%;
+      overflow: hidden;
+      border-radius: 5px;
+      color: ivory;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    
+    .P-blur-back::before {
+      content: '';
+      margin: -35px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(20px);
+      z-index: -1;
+    }
+    
+  /* --------------------------------------------------------------------------------------------------*/ 
+  /* --------------------------------------------------------------------------------------------------*/ 
+
+  .A-Beach
+  {
+    background: url(../img/beach_cg.jpg);
+    background-repeat: no-repeat;
+    filter: saturate(87%);
+    background-size: 100%;
+    /* background-position-x: 13px; */
+    /* background-position-y: -3px; */
+    height: 444px;
+    /* width: 99%; */
+    /* max-width: 822px; */
+    min-width: 200px;
+    top: 70%;
+    z-index: 3;
+    top: 0%;
+  }
+
   /* --------------------------------------------------------------------------------------------------*/ 
   /* --------------------------------------------------------------------------------------------------*/ 
