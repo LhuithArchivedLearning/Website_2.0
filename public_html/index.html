@@ -3,13 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Eugene Martens Portfolio">
 	<meta name="keywords" content="Eugene Martens, Portfolio, software development, web desighn, game development, programming">
 	<meta name="author" content="Eugene Martens">
 	<link rel="shortcut icon" type="image/png" href="img/Icons/favicon.ico">
 
-	<title>Gene Space | Oh Hey</title>
+	<title>Eugene Martens| Welcome</title>
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -22,7 +23,7 @@
 	<!--Import jQuery before materialize.js-->
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script>
 		(function (i, s, o, g, r, a, m) {
@@ -36,10 +37,50 @@
 	</script>
 
 	<script>
+		$(document).ready(function () {
 
+			$('.modal').modal();
 
+			$('#contact').modal({
+				dismissible: false
+			});
+			$(".button-collapse").sideNav();
+			$('.carousel.carousel-slider').carousel({ fullWidth: true });
+			$('.scrollspy').scrollSpy({ scrollOffset: 0 });
+			$('select').material_select();
+
+			$("#navvy").hide(); //hide your div initially
+			var topOfOthDiv = $("#Projects").offset().top;
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > topOfOthDiv - 15) { //scrolled past the other div?
+					$("#navvy").fadeIn("slow"); //reached the desipeach point -- show div
+				}
+				else {
+					$("#navvy").fadeOut("slow");
+				}
+			});
+
+		});
 	</script>
 
+	<script>
+		function Pause() {
+			console.log("poo");
+			var carousel = $('#4').carousel();
+			carousel.off();
+		}
+
+		function Init() {
+			document.onclick = function () {
+				$('#1').carousel({ fullWidth: true });
+				$('#4').carousel({ fullWidth: true });
+				$('.carousel.carousel-slider').carousel({ fullWidth: true });
+			}
+		}
+	</script>
+
+	<!-- Main -->
+	<!-- Three JS -->
 </head>
 
 <body>
@@ -47,641 +88,1300 @@
 
 	<!------------------------------MAIN------------------------------>
 	<main>
+
+
+
+		<nav id="navvy" class="fixed display-flex">
+			<div class="nav-wrapper">
+				<a href="#" data-activates="mobile-demo" class="button-collapse">
+					<i class="material-icons">menu</i>
+				</a>
+				<a id="right" target="_blank" href="https://twitter.com/jhonnywhiplash" class="m-sides-5 waves-effect waves-light btn-floating social twitter social-twit-col z-depth-1">
+					<i class="fa fa-twitter l-height-40"></i> Sign in with twitter</a>
+				<a id="right" target="_blank" href="https://github.com/Togene" class="m-sides-5 waves-effect waves-light btn-floating social github social-git-col z-depth-1">
+					<i class="fa fa-github l-height-40"></i> Sign in with github</a>
+				<a id="right" target="_blank" href="https://www.linkedin.com/in/eugene-martens-7b9603a0/" class="m-sides-5 waves-effect waves-light btn-floating social linkedin social-linked-col z-depth-1">
+					<i class="fa fa-linkedin l-height-40"></i> Sign in with linkedin</a>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="#Projects">Projects</a>
+					</li>
+					<li>
+						<a href="#Services">Services</a>
+					</li>
+					<li>
+						<a href="#About">About</a>
+					</li>
+					<li>
+						<a href="#Contact">Contact</a>
+
+					</li>
+					<li>
+						<a href="http://webgl.eugenemartens.com/">WebGl</a>
+
+					</li>
+
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li>
+						<a href="#Projects">Projects</a>
+					</li>
+					<li>
+						<a href="#Services">Services</a>
+					</li>
+					<li>
+						<a href="#About">About</a>
+					</li>
+					<li>
+						<a href="#Contact">Contact</a>
+					</li>
+					<li>
+						<a href="http://webgl.eugenemartens.com/">WebGl</a>
+
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!------------------------------MODAL CONTENT------------------------------>
 		<div class="row no-b-margin">
 
-			<div class="width-clamp-100 row no-b-margin">
-				<!-- ----------------------------SPLASH------------------------- -->
-				<div class="col s12 blue h-100vh splash-background  l2 exclude-h width-clamp-100">
-					<div class="container centre position-b">
-						<div class="container centre position-b"></div>
-						<h2 class="t-align-c f-c-white splash-argo-f">EUGENE MARTENS</h2>
-						<h5 class="t-align-c f-c-white">|Creative - Engineering|</h5>
-						<div class="container centre">
-							<a class="waves-effect waves-light btn" href="#Projects">
-								Projects
-							</a>
-							<a class="waves-effect waves-light btn" href="#Services">
-								Services
-							</a>
-							<a class="waves-effect waves-light btn" href="#Contact">
-								Contact
-							</a>
+			<!-- Modal Structure -->
+
+			<div id="m-art-beach" class="modal b-r-10 no-color m-t-20">
+				<div class="modal-content">
+					<img src="./img/beach_cg.jpg" alt="" class="img-clamp-100">
+				</div>
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-art-1" class="modal b-r-10 no-color padding-10 m-t-20">
+				<div class="modal-content">
+					<img src="./img/Art_01.JPG" alt="" class="img-clamp-100">
+				</div>
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-art-9" class="modal b-r-10 no-color padding-10 m-t-20">
+				<div class="modal-content">
+					<img src="./img/Art_09.png" alt="" class="img-clamp-100">
+				</div>
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-art-2" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+				<div class="modal-content">
+					<img src="./img/Art_02.JPG" alt="" class="img-clamp-100">
+				</div>
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-art-3" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Art_03.JPG" alt="" class="img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-art-3" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Art_03.JPG" alt="" class="img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-art-8" class="modal v-modal-width-2 b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Art_08.jpg" alt="" class="img-clamp-100">
+				</div>
+
+			</div>
+
+			<!------------------------------------------------------------------------>
+
+			<!-- Modal Structure -->
+			<div id="m-p-art-0" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/Pixel_Art0.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-p-art-1" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/pixel_Gene_Dance/Puri_Puri_Jump.gif" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-p-art-2" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/Pixel_Art2.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-p-art-3" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/pixel_Gene_Dance/Jest_Dance.gif" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-p-art-4" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/Pixel_Art4.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-p-art-5" class="modal v-modal-width-2 b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/Pixel_Art5.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-p-art-6" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/Pixel_Art6.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-p-art-7" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/Pixel_Art7.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-p-art-8" class="modal v-modal-width b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/2d/pixel_Gene_Dance/Pixel_Gene.gif" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!------------------------------------------------------------------------>
+			<!------------------------------------------------------------------------>
+
+			<!-- Modal Structure -->
+			<div id="m-m-art-0" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-0.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-m-art-1" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-1.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-m-art-2" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-2.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<!-- Modal Structure -->
+			<div id="m-m-art-3" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-3.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-m-art-4" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-4.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-m-art-5" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-5.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+			<div id="m-m-art-6" class="modal b-r-10 no-color padding-10 m-t-20">
+
+				<div class="modal-content">
+					<img src="./img/Models/m-art-6.png" alt="" class="img-pixelated img-clamp-100">
+				</div>
+
+			</div>
+
+
+			<!------------------------------------------------------------------------>
+			<!------------------------------------------------------------------------>
+
+			<div id="contact" class="modal max-w-550 b-r-10 no-color padding-10">
+
+				<div class="modal-content padding-0">
+					<div class=" container  w-90 centre">
+						<div class="container abs t-r-0 width-clamp-auto">
+							<i class="trans-5-10 material-icons left modal-close close-transform">clear</i>
 						</div>
+
+						<form action="https://formspree.io/eugene@lithstudios.com" method="POST">
+							<div class=" container p-m-10 centre form-border white  w-100 z-depth-3 f-c-black">
+								<div class="container w-90">
+
+									<div class="input-field col s12">
+										<select type="hidden" name="_subject" value="New submission!">
+											<option value="No Topic" disabled selected>Topic</option>
+											<option value="Design and Development">Design and Development</option>
+											<option value="Visual Art">Visual Art</option>
+											<option value="Miscellaneous">Miscellaneous</option>
+										</select>
+										<label>Area Of Interest</label>
+									</div>
+
+									<div class="row">
+										<div class="row">
+											<div class="input-field col s12">
+												<i class="material-icons prefix">account_circle</i>
+												<input id="icon_prefix" type="text" name="Name" class="validate">
+												<label for="icon_prefix">Name</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="row">
+											<div class="input-field col s12 ">
+												<i class="material-icons prefix">email</i>
+												<input id="email" type="email" name="Email" class="validate border-b">
+												<label for="email" data-error="wrong" data-success="right">Email</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="row m-b-10">
+											<div class="input-field col s12">
+												<i class="material-icons prefix">mode_edit</i>
+												<textarea id="icon_prefix2" class="materialize-textarea" name="Message"></textarea>
+												<label for="icon_prefix2">Message</label>
+											</div>
+										</div>
+									</div>
+									<!-- onclick="Materialize.toast('Sent!', 5000)" -->
+
+									<button class="showMore waves-effect waves-light btn blue" type="submit" value="Send">
+										<i class="material-icons left">email</i>Send</button>
+
+								</div>
+							</div>
+
+						</form>
 					</div>
 				</div>
 			</div>
+		</div>
+
+
+		<!------------------------------MODAL CONTENT------------------------------>
+
+		<div class="width-clamp-100 row no-b-margin">
 			<!-- ----------------------------SPLASH------------------------- -->
 
-			<!-- ----------------------------PROJECTS------------------------- -->
-			<div class="m-b-7 row no-b-margin scrollspy" id="Projects">
-				<nav class="nav-extended dark">
-					<div class="z-depth-3 nav-wrapper min-h-5">
+			<div class="responsive-img pos-rel col s12 blue h-100vh Splash-Back  l2 exclude-h width-clamp-100">
+				<div class=" container centre position-b">
+					<div class="container centre position-b"></div>
+
+					<div class=" Splash-blur-back z-depth-5 t-align-c">
+						<h2 class="t-align-c f-c-gold splash-argo-f">EUGENE MARTENS</h2>
+						<h4 class="t-align-c f-c-gold">Creative - Engineering</h4>
+					</div>
+					<div class="container centre">
+						<a class="waves-effect waves-light btn blue" href="#Projects">
+							Projects
+						</a>
+						<a class="waves-effect waves-light btn blue" href="#Services">
+							Services
+						</a>
+						<a class="waves-effect waves-light btn blue" href="#Contact">
+							Contact
+						</a>
+						<a class="waves-effect waves-light btn blue" href="http://webgl.eugenemartens.com/">
+							WebGl
+						</a>
 					</div>
 
-					<div class="w-90 float-l row">
-						<ul class="h-banner-35 z-depth-3 margin-b-15 ul-grid tabs tabs-transparent warm-sun h-banner float-l display-flex">
-							<div class="w-100 row grid-mode white h-banner-row">
-								<li class=" tab flex-grow-1">
-									<h2 class="neg-b-margin-13 f-c-black margin-a defualt">projects</h2>
-								</li>
-								<li class="float-r tab flex-grow-1">
-									<a class="waves-effect waves-light f-c-black" onclick="Init(), Init()" href="#1">Games</a>
-								</li>
-
-								<li class="float-r tab flex-grow-1">
-									<a class="f-c-black" onclick="Init()" href="#2">Art</a>
-								</li>
-								<li class="float-r tab flex-grow-1">
-									<a class="f-c-black" onclick="Init()" href="#3">Software</a>
-								</li>
-							</div>
-						</ul>
-					</div>
-				</nav>
-
-				<div id="1" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
-					<div class="carousel-fixed-item center">
-
-					</div>
-					<div class="carousel-item no-color white-text" href="#one!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class=" UG-Back z-depth-3 padding-10">
-									<div class="ultra-gods-Logo "></div>
-									<div class="blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-					<div class="carousel-item no-color white-text" href="#two!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class=" D67-Back z-depth-3 padding-10">
-									<div class="D67-Logo "></div>
-									<div class="D67-blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-
-					</div>
-					<div class="carousel-item no-color white-text" href="#three!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class=" LO-Back z-depth-3 padding-10">
-									<div class="LO-Logo "></div>
-									<div class="LO-blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-
-					</div>
-					<div class="carousel-item no-color white-text" href="#four!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="C-Back z-depth-3 padding-10">
-									<div class="C-Logo "></div>
-									<div class="C-blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-					</div>
-
-					<div class="carousel-item no-color white-text" href="#five!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="M-Back z-depth-3 padding-10">
-									<div class="M-Logo "></div>
-									<div class="M-blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-
-
-					<div class="carousel-item no-color white-text" href="#six!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="SPP-Back z-depth-3 padding-10">
-									<div class="SPP-Logo "></div>
-									<div class="SPP-blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-
-					<div class="carousel-item no-color white-text" href="#seven!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="P-Back z-depth-3 padding-10">
-									<div class="P-Logo "></div>
-									<div class="P-blur-back z-depth-5 t-align-c">
-										<div class="defualt container">
-											Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
-											a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local
-											Multiplayer|Indie|2D Platformer|
-										</div>
-									</div>
-
-									<div class="t-align-c">
-										<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-
-				</div>
-
-
-
-				<div id="2" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
-					<div class="carousel-fixed-item center">
-
-					</div>
-					<div class="carousel-item red white-text" href="#one!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="min-h-595 white z-depth-3 padding-10">
-									<img class="width-clamp-100  z-depth-3" src="./img/beach_cg.jpg">
-									<p class="m-t-75">Painted in Photoshop and altered using a HLSL shader to give it a painters effect</p>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-					<div class="carousel-item amber white-text" href="#two!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="min-h-595 white z-depth-3 padding-10">
-									<img class="width-clamp-100  z-depth-3" src="./img/Art_01.JPG">
-									<p class="m-t-75">Life Drawing Work</p>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-					<div class="carousel-item green white-text" href="#three!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="min-h-595 white z-depth-3 padding-10">
-									<div class "row">
-										<div class="col s6">
-											<img class="width-clamp-100  z-depth-3" src="./img/Art_02.JPG">
-											<p class="m-t-75">Multimedia Drawing Project</p>
-										</div>
-										<div class="col s6">
-											<img class="width-clamp-100  z-depth-3" src="./img/Art_03.JPG">
-											<p class="m-t-130">Self Portrait</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
-					</div>
-					<div class="carousel-item blue white-text" href="#four!">
-
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-						<div class="width-clamp-95 f-c-black container">
-							<div class="b-r-10 warm-sun padding-10 m-t-20 z-depth-3">
-								<div class="min-h-595 white z-depth-3 padding-10">
-									<div class "row">
-										<div class="col s6">
-											<img class="width-clamp-100  z-depth-3 img-clamp" src="./img/Art_04.JPG">
-										</div>
-										<div class="col s6">
-											<img class="width-clamp-100  z-depth-3 img-clamp" src="./img/Art_05.JPG">
-										</div>
-									</div>
-									<div class "row">
-										<div class="col s6">
-											<img class="width-clamp-100  z-depth-3 img-clamp" src="./img/Art_06.JPG">
-										</div>
-										<div class="col s6">
-											<img class="width-clamp-100  z-depth-3 img-clamp" src="./img/Art_07.JPG">
-										</div>
-									</div>
-									<div class="row">
-										<div class="col s12">
-											<p class="m-t-45">Self Portrait</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
-
+					<div class="pos-abs-bottom">
+						<img class="img-splash-unity" src="./img/Unity_Made_By.png">
 					</div>
 				</div>
-
-
-				<div id="3" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
-					<div class="carousel-fixed-item center">
-
-					</div>
-					<div class="carousel-item red white-text" href="#one!">
-						<h2>First Panel</h2>
-						<p class="white-text">This is your first panel</p>
-					</div>
-					<div class="carousel-item amber white-text" href="#two!">
-						<h2>Second Panel</h2>
-						<p class="white-text">This is your second panel</p>
-					</div>
-					<div class="carousel-item green white-text" href="#three!">
-						<h2>Third Panel</h2>
-						<p class="white-text">This is your third panel</p>
-					</div>
-					<div class="carousel-item blue white-text" href="#four!">
-						<h2>Fourth Panel</h2>
-						<p class="white-text">This is your fourth panel</p>
-					</div>
-				</div>
-
-
 
 			</div>
-			<!-- ----------------------------PROJECTS------------------------- -->
 
-			<!-- ----------------------------SERVICES------------------------- -->
-			<div class="neg-margin-top-31 row no-b-margin scrollspy peach-tinge1" id="Services">
-				<nav class="z-depth-3 nav-extended dark">
-					<div class="nav-wrapper min-h-5">
-					</div>
-					<div class="nav-content">
-						<ul class="float-l h-banner warm-sun display-flex z-depth-3">
-							<li class="flex-grow-1">
-								<div class="row white h-banner-row">
-									<h2 class="f-c-black font-Upper t-align-l margin-a defualt">SERVICES</h2>
-								</div>
+		</div>
+		</div>
+		<!-- ----------------------------SPLASH------------------------- -->
+
+		<!-- ----------------------------PROJECTS------------------------- -->
+		<div class="m-b-7 row no-b-margin scrollspy" id="Projects">
+			<nav class="nav-extended dark">
+				<div class="z-depth-3 nav-wrapper min-h-5">
+				</div>
+
+				<div class="w-90 float-l row">
+					<ul class="h-banner-35 z-depth-3 margin-b-15 ul-grid tabs tabs-transparent white h-banner float-l display-flex">
+						<div class="w-100 row grid-mode white h-banner-row">
+							<li class=" tab flex-grow-1">
+								<h2 class="neg-b-margin-13 f-c-black margin-a defualt">projects</h2>
 							</li>
-						</ul>
+							<li class="float-r tab flex-grow-1">
+								<a class="waves-effect waves-light f-c-black" onclick="Init()" href="#1">Games</a>
+							</li>
+
+							<li class="float-r tab flex-grow-1">
+								<a class="f-c-black" onclick="Init()" href="#2">Art</a>
+							</li>
+							<li class="float-r tab flex-grow-1">
+								<a class="f-c-black" onclick="Init()" href="#3">Software</a>
+							</li>
+							<li class="float-r tab flex-grow-1">
+								<a class="f-c-black" onclick="Init()" href="#4">Rendering</a>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</nav>
+
+			<div id="1" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
+				<div class="carousel-fixed-item center">
+
+				</div>
+				<div class="carousel-item no-color white-text" href="#one!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 UG-Back z-depth-3 padding-10">
+								<div class="ultra-gods-Logo "></div>
+								<div class="blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
 					</div>
-				</nav>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+				<div class="carousel-item no-color white-text" href="#two!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 D67-Back z-depth-3 padding-10">
+								<div class="D67-Logo "></div>
+								<div class="D67-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
 
 
-				<div class="col s12 h-100vh ">
-					<div class="col s12 h-100vh ">
+				</div>
+				<div class="carousel-item no-color white-text" href="#three!">
 
-						<div class="b-r-10 row warm-sun padding-10 m-t-20 z-depth-3">
-							<div class=" white z-depth-3 padding-10">
-								<hr>
-								<article class=" f-size-17 defualt t-align-c">
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 max-h-400 LO-Back z-depth-3 padding-10">
+								<div class="LO-Logo "></div>
+								<div class="LO-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
 
-									<a class="waves-effect waves-light btn social-twit-col">
-										<i class="material-icons left">email</i>Contact Me</a>
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
 
-								</article>
-								<hr>
+
+				</div>
+
+				<div class="carousel-item no-color white-text" href="#five!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 M-Back z-depth-3 padding-10">
+								<div class="M-Logo "></div>
+								<div class="M-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+
+
+				<div class="carousel-item no-color white-text" href="#six!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 SPP-Back z-depth-3 padding-10">
+								<div class="SPP-Logo "></div>
+								<div class="SPP-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+
+				<div class="carousel-item no-color white-text" href="#seven!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 P-Back z-depth-3 padding-10">
+								<div class="P-Logo "></div>
+								<div class="P-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+
+			</div>
+
+
+
+			<div id="2" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
+				<div class="carousel-fixed-item center">
+
+				</div>
+				<div class="carousel-item no-color white-text" href="#one!">
+					<!--
+					<!------------------------------------------      CONTENT ------------------------------------                 -->
+
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="pos-rel max-h-400 min-max-600  white z-depth-3 padding-10">
+								<h5>Traditional and Digital</h5>
+								<div class="gallery">
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-1">
+										<figure>
+											<img src="./img/Art_01.JPG" alt="" class="img-clamp-200">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-beach">
+										<figure>
+											<img src="./img/beach_cg.jpg" alt="" class="img-clamp-200 img-transform">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-9">
+										<figure>
+											<img src="./img/Art_09.png" alt="" class="img-clamp-200">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-2">
+										<figure>
+											<img src="./img/Art_02.JPG" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-3">
+										<figure>
+											<img src="./img/Art_03.JPG" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-8">
+										<figure>
+											<img src="./img/Art_08.jpg" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+
+								</div>
 							</div>
 
 						</div>
 					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+				</div>
+				<div class="carousel-item no-color white-text" href="#two!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="pos-rel max-h-400 min-max-600  white z-depth-3 padding-10">
+								<h5>2D</h5>
+								<div class="gallery">
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-0">
+										<figure>
+											<img src="./img/2d/Pixel_Art0.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-1">
+										<figure>
+											<img src="./img/2d/Pixel_Art1.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-2">
+										<figure>
+											<img src="./img/2d/Pixel_Art2.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-3">
+										<figure>
+											<img src="./img/2d/Pixel_Art3.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-4">
+										<figure>
+											<img src="./img/2d/Pixel_Art4.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-5">
+										<figure>
+											<img src="./img/2d/Pixel_Art5.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-6">
+										<figure>
+											<img src="./img/2d/Pixel_Art6.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-7">
+										<figure>
+											<img src="./img/2d/Pixel_Art7.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-p-art-8">
+										<figure>
+											<img src="./img/2d/Pixel_Art8.png" alt="" class="img-pixelated img-clamp-100">
+										</figure>
+									</a>
+
+
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+
+
+				<div class="carousel-item no-color white-text" href="#four!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="pos-rel max-h-400 min-max-600  white z-depth-3 padding-10">
+								<h5>Concepts and Illustrations</h5>
+								<div class="gallery">
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-1">
+										<figure>
+											<img src="./img/Art_01.JPG" alt="" class="img-clamp-200">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-beach">
+										<figure>
+											<img src="./img/beach_cg.jpg" alt="" class="img-clamp-200 img-transform">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-9">
+										<figure>
+											<img src="./img/Art_09.png" alt="" class="img-clamp-200">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-2">
+										<figure>
+											<img src="./img/Art_02.JPG" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-3">
+										<figure>
+											<img src="./img/Art_03.JPG" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-art-8">
+										<figure>
+											<img src="./img/Art_08.jpg" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+
+				<div class="carousel-item no-color white-text" href="#five!">
+
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 LTR-Back z-depth-3 padding-10">
+								<div class="LTR-Logo "></div>
+								<div class="LTR-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://www.ultragods.com/" target="_blank" class="btn ultra-red-theme">For More Ultra</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
 				</div>
 			</div>
-			<!-- ----------------------------SERVICES------------------------- -->
-
-			<!-- ----------------------------ABOUT------------------------- -->
-			<div class="row no-b-margin  scrollspy" id="About">
-				<nav class="z-depth-3 nav-extended dark">
-					<div class="nav-wrapper min-h-5">
-					</div>
-					<div class="nav-content">
-						<ul class=" float-l h-banner warm-sun display-flex z-depth-3">
-							<li class="flex-grow-1">
-								<div class="row white h-banner-row">
-									<h2 class="f-c-black font-Upper t-align-l margin-a defualt"> About </h2>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</nav>
 
 
-				<div class="col s12 h-100vh ">
-					<div class="col s12 h-100vh ">
+			<div id="3" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
+				<div class="carousel-fixed-item center">
 
-						<div class="b-r-10 row warm-sun padding-10 m-t-20 z-depth-3">
-							<div class=" white z-depth-3 padding-10">
-								<hr>
-								<article class="main defualt">
+				</div>
+				<div class="carousel-item no-color white-text" href="#one!">
 
-									<p>
-										My name is Eugene Martens, recently graduated Game Designer and Artist.
-									</p>
-									<p>
-										Game Development is my main passion, everything from back end game engine structures to front end aesthetics creation are
-										all areas that I am interested in. So much goes into the development of a game, which in turn means always consistently
-										learning something new, a large part of why I enjoy Game development.
-									</p>
-
-									<p>
-										Visual aesthetics and design of a game are my main points of interest, as art, conceptional design and graphics programming
-										are areas I am most familiar and adept at.
-									</p>
-
-									<p>
-										Feel free to explore my website and check out some of my work
-									</p>
-
-								</article>
-
-								<div class="row c">
-									<!-- <h3>What We Do</h3> !-->
-									<img src="./img/Eugene01.jpg" class=" z-depth-3 size border-rounded  padding-5 border-rad-20">
-
-								</div>
-								<hr>
-								<div class="row">
-									<div class="col s7">
-										<h5 class="card-title defualt ">PROFICIENT IN</h5>
-										<ul>
-											<p class="card-p z-depth-3">C# and Java</p>
-											<p class="card-p z-depth-3">HLSL/GLSL/CG</p>
-											<p class="card-p z-depth-3">JS</p>
-											<p class="card-p z-depth-3">HTML & CSS</p>
-											<p class="card-p z-depth-3">Unity3D</p>
-											<p class="card-p z-depth-3">Visual Studio</p>
-											<p class="card-p z-depth-3">Pixel Art</p>
-											<p class="card-p z-depth-3">3D Modeling</p>
-											<p class="card-p z-depth-3">Blender</p>
-											<p class="card-p z-depth-3">3DS Max</p>
-											<p class="card-p z-depth-3">Rigging</p>
-											<p class="card-p z-depth-3">Website Development</p>
-											<p class="card-p z-depth-3">WebGl/OpenGL</p>
-											<p class="card-p z-depth-3">Advanced Mathmatics</p>
-
-											<h5 class="card-title">AVERAGE KNOWLEDGE</h5>
-											<p class="card-p z-depth-3">Characters Concepting</p>
-											<p class="card-p z-depth-3">Git</p>
-											<p class="card-p z-depth-3">C++ and C</p>
-											<p class="card-p z-depth-3">Angular</p>
-											<p class="card-p z-depth-3">ASP.NET</p>
-											<p class="card-p z-depth-3">FrontEnd MVC Development</p>
-											<p class="card-p z-depth-3">Backend MVC Development</p>
-											<p class="card-p z-depth-3">3D Animation in Maya/Blender/3DMax</p>
-											<p class="card-p z-depth-3">Landscape/Level Concept</p>
-											<p class="card-p z-depth-3">Project Managment</p>
-											<p class="card-p z-depth-3">Game Mechanics Development</p>
-											<p class="card-p z-depth-3">Illustration & Concepting</p>
-											<p class="card-p z-depth-3">2D Animation in Flash/Photoshop/Asesprite</p>
-
-											<h5 class="card-title">SOME KNOWLEDGE</h5>
-											<p class="card-p z-depth-3">UI Creation and Implimentation</p>
-											<p class="card-p z-depth-3">Profiling & Monetization</p>
-											<p class="card-p z-depth-3">Maya</p>
-											<p class="card-p z-depth-3">SQL</p>
-											<p class="card-p z-depth-3">Logo Design</p>
-										</ul>
-										<hr>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 Ang-Back z-depth-3 padding-10">
+								<div class="Ang-Logo "></div>
+								<div class="Ang-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
 									</div>
-									<div class="col s5">
+								</div>
 
-										<div class="t-align-c f-size-17">
-											<h5 class="card-title defualt ">CONTACT DETIAILS</h5>
-											<ul class="content-display">
-												<p class="card-p z-depth-1">
-													<i class="material-icons float-l">place</i>
-													<a>Brisbane, Australia</a>
-												</p>
-												<p class="card-p z-depth-1">
-													<i class="material-icons float-l">call</i>
-													<a> 0474297982</a>
-												</p>
-												<p class="card-p z-depth-1 content-display-grid">
-													<i class="material-icons float-l">
-														email
-													</i>
-													<a>Jonnywhiplash@hotmail.com.au</a>
+								<div class="t-align-c">
+									<a href="http://angular.eugenemartens.com" target="_blank" class="btn ultra-red-theme">Demo Site</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
 
-													<a>or</a>
-													<a class="waves-effect waves-light btn social-twit-col">
-														<i class="material-icons left">email</i>Email Me</a>
+				</div>
+				<div class="carousel-item no-color white-text" href="#two!">
 
-												</p>
-												<p>
-													<a class="waves-effect waves-light btn-floating social twitter social-twit-col z-depth-1">
-														<i class="fa fa-twitter"></i> Sign in with twitter</a>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 MVC-Back z-depth-3 padding-10">
+								<div class="MVC-Logo "></div>
+								<div class="MVC-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
 
-													<a class="waves-effect waves-light btn-floating social github social-git-col z-depth-1">
-														<i class="fa fa-github"></i> Sign in with github</a>
+								<div class="t-align-c">
+									<a href="https://github.com/Togene/MVC_5" target="_blank" class="btn ultra-red-theme">Project Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
 
-													<a class="waves-effect waves-light btn-floating social linkedin social-linked-col z-depth-1">
-														<i class="fa fa-linkedin"></i> Sign in with linkedin</a>
 
-												</p>
-											</ul>
+				</div>
+
+			</div>
+
+			<div id="4" class="no-b-margin height-clamp-85vh carousel carousel-slider center" data-indicators="true">
+				<div class="carousel-fixed-item center">
+
+				</div>
+				<div class="carousel-item no-color white-text" href="#one!">
+					<!--
+					<!------------------------------------------      CONTENT ------------------------------------                 -->
+
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="pos-rel max-h-400 min-max-600  white z-depth-3 padding-10">
+								<h5>3D Models</h5>
+								<div class="gallery">
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-0">
+										<figure>
+											<img src="./img/Models/m-art-0.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-1">
+										<figure>
+											<img src="./img/Models/m-art-1.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-2">
+										<figure>
+											<img src="./img/Models/m-art-2.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-3">
+										<figure>
+											<img src="./img/Models/m-art-3.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-4">
+										<figure>
+											<img src="./img/Models/m-art-4.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-5">
+										<figure>
+											<img src="./img/Models/m-art-5.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+									<a class="v-align-a waves-effect waves-light modal-trigger" href="#m-m-art-6">
+										<figure>
+											<img src="./img/Models/m-art-6.png" alt="" class="img-clamp-100">
+										</figure>
+									</a>
+								</div>
+
+								<div class="t-align-c padding-25">
+									<a href="http://webgl.eugenemartens.com/model_demo.html" class="btn ultra-red-theme">Live Demo</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+				</div>
+				<div class="carousel-item no-color white-text" href="#two!">
+
+									<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+									<div class="width-clamp-95 f-c-black container">
+										<div class="b-r-10 no-color padding-10 m-t-20">
+											<div class="max-h-400 max-h-400 Engine-Back z-depth-3 padding-10">
+												<div class="Engine-Logo "></div>
+												<div class="Engine-blur-back z-depth-5 t-align-c">
+													<div class="defualt container">
+														Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+														a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+														Platformer|
+													</div>
+												</div>
+				
+												<div class="t-align-c">
+													<a href="https://github.com/Togene/Jave_Game_Engine" target="_blank" class="btn ultra-red-theme">Project Link</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+				
+
+				</div>
+
+
+				<div class="carousel-item no-color white-text" href="#four!">
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+					<div class="width-clamp-95 f-c-black container">
+						<div class="b-r-10 no-color padding-10 m-t-20">
+							<div class="max-h-400 max-h-400 S-Back z-depth-3 padding-10">
+								
+								<h3 class="t-align-c f-c-white m-b-250">
+									Shading
+								</h3>
+								<div class="S-blur-back z-depth-5 t-align-c">
+									<div class="defualt container">
+										Ultra Gods is a multi player, 2D platformer, fast paced, arcade style, versus game that puts players against each other in
+										a battle for glory. Lead Artist, Animation, Asset-Creation Platform: PC Status: Alpha |Fighter |Brawler|Local Multiplayer|Indie|2D
+										Platformer|
+									</div>
+								</div>
+
+								<div class="t-align-c">
+									<a href="http://webgl.eugenemartens.com/shader_demo.html" class="btn ultra-red-theme">Live Demo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------      CONTENT ------------------------------------                 -->
+
+				</div>
+			</div>
+
+
+
+		</div>
+
+
+
+		<!-- ----------------------------PROJECTS------------------------- -->
+
+		<!-- ----------------------------SERVICES------------------------- -->
+		<div class="neg-margin-top-31 row no-b-margin scrollspy peach-tinge1" id="Services">
+			<nav class="nav-extended dark">
+				<div class="nav-wrapper min-h-5">
+				</div>
+				<div class="nav-content">
+				</div>
+			</nav>
+
+
+			<div class="col s12 h-100vh ">
+				<div class="col s12 h-100vh ">
+
+					<div class="b-r-10 row no-color padding-10 m-t-20">
+						<div class=" white z-depth-3 padding-10">
+							<h2 class="f-c-black font-Upper t-align-l margin-a defualt">SERVICES</h2>
+							<hr>
+							<article class=" f-size-17 defualt t-align-l">
+								<!-- ----------------------------SERVICES------------------------- -->
+								<!-- ----------------------------SERVICES------------------------- -->
+								<h3 class="t-align-c">
+									Visual
+								</h3>
+								<div class="row t-align-c">
+									<div class="col s6">
+										<h5>
+											Illustration and Concepting
+										</h5>
+
+										<p>
+											With a diploma behind my name and unwavering respect for the arts, I take ideas and (with a bit of coffee) convert them into
+											rich, vibrant and compositional sound works for any project.
+										</p>
+
+										<h5>
+											3D Modeling and Rigging
+										</h5>
+
+										<p>
+											Specialising in low poly art with an emphasis on balancing style and substance. No Aspect of a model is left without some
+											form of conscious decision behind it and a solid rigging etiquette makes the animation process that much smoother.
+										</p>
+
+									</div>
+									<div class="col s6">
+										<h5>
+											2D Rendering and Animation
+										</h5>
+
+										<p>
+											With crisp, clean and sharp drawings I can convert obscenely complex objects into easily readable pixelated works, then bring
+											them to life using Aseprite or photoshop.
+										</p>
+
+										<h5>
+											Rendering and Graphics Programming
+										</h5>
+
+										<p>
+											Combining logic and creativity and an in depth understanding of the GPU and its many pipe lines I can bring ideas to computer
+											screen. Shading, advanced rendering, lighting and natural simulations are all a part of the process taken to bring
+											a world to life through HLSL/GLSL.
+										</p>
+									</div>
+								</div>
+
+								<!-- ----------------------------SERVICES------------------------- -->
+								<!-- ----------------------------SERVICES------------------------- -->
+								<h3 class="t-align-c">
+									Design & Development
+								</h3>
+
+								<div class="container t-align-c">
+									<img class="w-100" src="./img/Development_Process.png">
+								</div>
+
+								<div class="row t-align-c">
+									<div class="col s6">
+										<h5>
+											ASP.NET MVC 5
+										</h5>
+
+										<p>
+											Front and Back end experience, data management through SQL queries, building forms and features, implementing validation,
+											utilizing RESTful Web API Convention's for Client side Development and ensuring that the application runs smoothly
+											with performance optimization.
+										</p>
+
+										<h5>
+											Angular 4
+										</h5>
+
+										<p>
+											Modular development experience, creating custom components and utilizing CLI deployment, implementing routing and navigations
+											with guarding, retrieving and displaying data, databinding {(banana in a box)} and data transformation using pipes.
+
+										</p>
+									</div>
+									<div class="col s6">
+										<h5>
+											Web Design & Development
+										</h5>
+
+										<p>
+											Personality is the key component to any website, preparing with concepts and mockups, then rendering the site with HTML 5
+											and CSS3, utilizing bootstrap and Materialize as a base, and building upon it with custom features and styles
+											such as WebGL to ensure that what is created is unique, personalized and responsive.
+										</p>
+
+										<h5>
+											Game Design & Development
+										</h5>
+
+										<p>
+											Emotion, depth and vibrancy are elements, I as a Game Developer focus and enhance upon with my own personal touch, overseeing
+											each step of the development process end to end ensuring that a project meets its requirements and does not lack
+											any qualities that makes it stand out from the rest.
+										</p>
+
+									</div>
+
+
+
+									<label class="showMore waves-effect waves-light btn blue  modal-trigger" href="#contact">
+										<i class="material-icons left">email</i>Contact Me</label>
+								</div>
+
+								<!-- ----------------------------SERVICES------------------------- -->
+								<!-- ----------------------------SERVICES------------------------- -->
+
+
+							</article>
+							<hr>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ----------------------------SERVICES------------------------- -->
+
+		<!-- ----------------------------ABOUT------------------------- -->
+		<div class="row no-b-margin  scrollspy" id="About">
+			<nav class="z-depth-3 nav-extended dark">
+				<div class="nav-wrapper min-h-5">
+				</div>
+				<div class="nav-content">
+
+				</div>
+			</nav>
+
+
+			<div class="col s12 h-100vh ">
+				<div class="col s12 h-100vh ">
+
+					<div class="b-r-10 row no-color padding-10 m-t-20">
+						<div class="t-align-c  white z-depth-3 padding-10">
+							<h2 class="f-c-black font-Upper t-align-l margin-a defualt"> About </h2>
+							<hr>
+							<article class="main defualt">
+
+								<p>
+									My name is Eugene Martens, recently graduated Game Designer and Artist.
+								</p>
+								<p>
+									Game Development is my main passion, everything from back end game engine structures to front end aesthetics creation are
+									all areas that I am interested in. So much goes into the development of a game, which in turn means always consistently
+									learning something new, a large part of why I enjoy Game development.
+								</p>
+
+								<p>
+									Visual aesthetics and design of a game are my main points of interest, as art, conceptional design and graphics programming
+									are areas I am most familiar and adept at.
+								</p>
+
+								<p>
+									Feel free to explore my website and check out some of my work
+								</p>
+
+							</article>
+
+							<div class="row c">
+								<!-- <h3>What We Do</h3> !-->
+								<img src="./img/Eugene01.jpg" class="z-depth-3 size border-rounded  padding-5 border-rad-20">
+
+							</div>
+							<hr>
+							<div class="row">
+								<ul>
+									<h5 class="card-title">PROFICIENT KNOWLEDGE</h5>
+									<p class="card-p z-depth-3">C# and Java</p>
+									<p class="card-p z-depth-3">HLSL/GLSL/CG</p>
+									<p class="card-p z-depth-3">JS</p>
+									<p class="card-p z-depth-3">HTML & CSS</p>
+									<p class="card-p z-depth-3">Unity3D</p>
+									<p class="card-p z-depth-3">Visual Studio</p>
+									<p class="card-p z-depth-3">Pixel Art</p>
+									<p class="card-p z-depth-3">3D Modeling</p>
+									<p class="card-p z-depth-3">Blender</p>
+									<p class="card-p z-depth-3">3DS Max</p>
+									<p class="card-p z-depth-3">Rigging</p>
+									<p class="card-p z-depth-3">Website Development</p>
+									<p class="card-p z-depth-3">WebGl/OpenGL</p>
+									<p class="card-p z-depth-3">Advanced Mathematics</p>
+
+									<h5 class="card-title">AVERAGE KNOWLEDGE</h5>
+									<p class="card-p z-depth-3">Characters Concepting</p>
+									<p class="card-p z-depth-3">Git</p>
+									<p class="card-p z-depth-3">C++ and C</p>
+									<p class="card-p z-depth-3">Angular</p>
+									<p class="card-p z-depth-3">ASP.NET</p>
+									<p class="card-p z-depth-3">Front/Back End MVC Development</p>
+									<p class="card-p z-depth-3">3D Animation in Maya/Blender/3DS Max</p>
+									<p class="card-p z-depth-3">Landscape/Level Concept</p>
+									<p class="card-p z-depth-3">Project Management</p>
+									<p class="card-p z-depth-3">Game Mechanics Development</p>
+									<p class="card-p z-depth-3">Illustration & Concepting</p>
+									<p class="card-p z-depth-3">2D Animation in Flash/Photoshop/Aseprite</p>
+
+									<h5 class="card-title">SOME KNOWLEDGE</h5>
+									<p class="card-p z-depth-3">UI Creation and Implementation</p>
+									<p class="card-p z-depth-3">Profiling & Monetisation</p>
+									<p class="card-p z-depth-3">Maya</p>
+									<p class="card-p z-depth-3">SQL</p>
+									<p class="card-p z-depth-3">Logo Design</p>
+								</ul>
+								<hr>
+							</div>
+
+							<label class="showMore waves-effect waves-light btn green" href="">
+								<i class="material-icons left">file_download</i>Download Resume</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ----------------------------ABOUT------------------------- -->
+
+		<!-- ----------------------------CONTACT------------------------- -->
+		<div class="row no-b-margin scrollspy" id="Contact">
+			<nav class="z-depth-3 nav-extended dark">
+				<div class="nav-wrapper min-h-5">
+				</div>
+				<div class="nav-content">
+				</div>
+			</nav>
+
+
+
+			<div class="col s12 h-100vh ">
+				<div class="col s12 h-100vh ">
+
+					<div class="b-r-10 row no-color padding-10 m-t-20">
+						<div class=" white z-depth-3 padding-10 centre">
+							<h2 class="f-c-black font-Upper t-align-l margin-a defualt"> Contact </h2>
+							<hr>
+							<div class="t-align-c f-size-17 f-c-black m-neg-15">
+								<ul class="content-display">
+									<li class="grid padding-t-b-5">
+										<i class="float-l material-icons">place</i>
+										<text class="float-r">Brisbane, Australia</text>
+									</li>
+									<li class="grid padding-t-b-5">
+
+										<i class="material-icons">call</i>
+										<text> 0474 297 982</text>
+
+									</li>
+									<li class="grid padding-t-b-5">
+										<i class="material-icons">
+											email
+										</i>
+										<text>eugene@lithstudios.com</text>
+									</li>
+								</ul>
+
+							</div>
+
+							<form action="https://formspree.io/eugene@lithstudios.com" method="POST">
+								<div class=" container p-m-10 centre form-border w-70 z-depth-3 f-c-black">
+									<div class="container w-90">
+
+										<div class="input-field col s12">
+											<select type="hidden" name="_subject" value="New submission!">
+												<option value="No Topic" disabled selected>Topic</option>
+												<option value="Design and Development">Design and Development</option>
+												<option value="Visual Art">Visual Art</option>
+												<option value="Miscellaneous">Miscellaneous</option>
+											</select>
+											<label>Area Of Interest</label>
 										</div>
 
+										<div class="row">
+											<div class="row">
+												<div class="input-field col s12">
+													<i class="material-icons prefix">account_circle</i>
+													<input id="icon_prefix" type="text" name="Name" class="validate">
+													<label for="icon_prefix">Name</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row">
+												<div class="input-field col s12 ">
+													<i class="material-icons prefix">email</i>
+													<input id="email" type="email" name="Email" class="validate border-b">
+													<label for="email" data-error="wrong" data-success="right">Email</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row m-b-10">
+												<div class="input-field col s12">
+													<i class="material-icons prefix">mode_edit</i>
+													<textarea id="icon_prefix2" class="materialize-textarea" name="Message"></textarea>
+													<label for="icon_prefix2">Message</label>
+												</div>
+											</div>
+										</div>
+										<!-- onclick="Materialize.toast('Sent!', 5000)" -->
+
+										<button class="showMore waves-effect waves-light btn blue" type="submit" value="Send">
+											<i class="material-icons left">email</i>Send</button>
+
 									</div>
 								</div>
-							</div>
+
+							</form>
 						</div>
+
 					</div>
 				</div>
 			</div>
-			<!-- ----------------------------ABOUT------------------------- -->
 
-
-			<!--						
-			<i class="material-icons">place</i><a>Brisbane, Australia</a>
-			
-			<i class="material-icons">call</i><a> 0474297982</a>
---->
-
-			<!-- ----------------------------CONTACT------------------------- -->
-			<div class="row no-b-margin scrollspy" id="Contact">
-				<nav class="z-depth-3 nav-extended dark">
-					<div class="nav-wrapper min-h-5">
-					</div>
-					<div class="nav-content">
-						<ul class=" float-l h-banner warm-sun display-flex z-depth-3">
-							<li class="flex-grow-1">
-								<div class="row white h-banner-row" id="About">
-									<h2 class="f-c-black font-Upper t-align-l margin-a defualt"> Contact </h2>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</nav>
-
-
-
-				<div class="col s12 h-100vh ">
-					<div class="col s12 h-100vh ">
-
-						<div class="b-r-10 row warm-sun padding-10 m-t-20 z-depth-3">
-							<div class=" white z-depth-3 padding-10">
-								<article class="f-size-17 defualt t-align-c">
-									<hr>
-									<p>
-
-									</p>
-									<p>
-									</p>
-									<a class="waves-effect waves-light btn social-twit-col">
-
-										<i class="material-icons left">email</i>Contact Me</a>
-									<hr>
-								</article>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
+		</div>
 		</div>
 
 	</main>
 	<!------------------------------MAIN------------------------------>
 	<!------------------------------MAIN------------------------------>
-	<footer class="page-footer social-twit-col footer-body padding-10 ">
+	<footer class="page-footer blue footer-body padding-10 ">
 		<div class="col s12">
 			<h6 class="t-align-c">LITH Studios, Copyright &copy; 2017</h6>
 		</div>
 	</footer>
-
-	<script>
-		$(document).ready(function () {
-			$('.carousel.carousel-slider').carousel({ fullWidth: true });
-			$('.scrollspy').scrollSpy({ scrollOffset: 0 });
-		});
-
-		// scrollspy
-
-		$(document).ready(function () {
-			$("#scrollspy").hide(); //hide your div initially
-			var topOfOthDiv = $("#Projects").offset().top;
-			$(window).scroll(function () {
-				if ($(window).scrollTop() > topOfOthDiv - 100) { //scrolled past the other div?
-					$("#scrollspy").fadeIn(); //reached the desipeach point -- show div
-				}
-				else {
-					$("#scrollspy").fadeOut();
-				}
-			});
-		});
-		function Init() {
-			$('.carousel.carousel-slider').carousel({ fullWidth: true });
-		}
-	</script>
-
-
-	<div class="site-blur-back row fixed z-100" id="scrollspy">
-		<div class="col hide-on-small-only m3">
-			<ul class=" section table-of-contents">
-				<li>
-					<a href="#Projects" class="f-c-black font-size">Projects</a>
-				</li>
-				<li>
-					<a href="#Services" class="f-c-black font-size">Services</a>
-				</li>
-				<li>
-					<a href="#About" class="f-c-black font-size">About</a>
-				</li>
-				<li>
-					<a href="#Contact" class="f-c-black font-size">Contact</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-
 </body>
 
 </html>

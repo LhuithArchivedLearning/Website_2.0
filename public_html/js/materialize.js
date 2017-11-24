@@ -9410,9 +9410,9 @@ if (Vel) {
 
         function setupEvents() {
           if (typeof window.ontouchstart !== 'undefined') {
-            view.on('touchstart.carousel', tap);
-            view.on('touchmove.carousel', drag);
-            view.on('touchend.carousel', release);
+            view[0].addEventListener('touchstart', tap);
+            view[0].addEventListener('touchmove', drag);
+            view[0].addEventListener('touchend', release);
           }
           view.on('mousedown.carousel', tap);
           view.on('mousemove.carousel', drag);
@@ -9646,7 +9646,8 @@ if (Vel) {
         function tap(e) {
           // Fixes firefox draggable image bug
           if (e.type === 'mousedown' && $(e.target).is('img')) {
-            e.preventDefault();
+            //e.preventDefault();
+            console.log("poop");
           }
           pressed = true;
           dragged = false;
